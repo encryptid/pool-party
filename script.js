@@ -1,5 +1,9 @@
 import './sass/style.scss';
 
-const init = () => console.log('pool partay!');
+import PoolParty from './pool-party';
 
-window.addEventListener('load', init());
+const poolParty = new PoolParty();
+
+// const init = () => console.log('pool partay!');
+
+// window.addEventListener('load', init());
