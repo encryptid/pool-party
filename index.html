@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pool Pros</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="script.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <section>
             <ul>
                 <li>Dealers and Distributors</li>
-                <li>Commercial Service<img src="./images/action-commercial-icon.png"></li>
+                <li><span>Commercial Service</span><img src="./images/action-commercial-icon.png"></li>
             </ul>
         </section>
         <nav>
@@ -29,9 +29,9 @@
             <button><img src="./images/location-icon.png" alt="small location pin">Find a Pool Pro</button>
         </nav>
     </header>
-
-    <img src='./images/water-image.png' alt='water surface banner'>
-    <section>
+    <main>
+    <!-- <img id='banner' src='./images/water-image.png' alt='water surface banner'> -->
+    <section id="select">
         <span>7 dealers in 28226</span>
         <fieldset>
             <legend>Filter results</legend>
@@ -48,13 +48,12 @@
                 <label for="res">Residential</label>
             </div>
             <div>
-                <input type="checkbox" id="comm" name="option" value="comm" checked />
+                <input type="checkbox" id="comm" name="option" value="comm" unchecked />
                 <label for="comm">Commercial</label>
             </div>
             <span>7</span>
         </fieldset>
     </section>
-    <main>
         <section class="card">
             <h3>Title1</h3>
             <hr>
