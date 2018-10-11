@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'SS Pika';
+  src: url("ss-pika.1929865a.woff");
+  /* IE9 Compat Modes */
+  src: url("ss-pika.1929865a.woff?#iefix") format("embedded-opentype"), url("ss-pika.1929865a.woff") format("woff"), url("ss-pika.532b09b1.ttf") format("truetype"), url("ss-pika.a8665590.svg") format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Regular.c6763146.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-Regular.c6763146.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Light.b04b6148.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-Light.b04b6148.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Semibold.385c3601.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-Semibold.385c3601.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Bold.aa3c9b95.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-Bold.aa3c9b95.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-ExtraBold.8f5df1a7.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-ExtraBold.8f5df1a7.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Italic.2c66fb5b.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-Italic.2c66fb5b.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-LightItalic.14754349.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-LightItalic.14754349.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-SemiboldItalic.81082f8e.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-SemiboldItalic.81082f8e.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-BoldItalic.6b9437c1.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-BoldItalic.6b9437c1.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-ExtraBoldItalic.f1dafbc2.ttf");
+  /* IE9 Compat Modes */
+  src: url("OpenSans-ExtraBoldItalic.f1dafbc2.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 800;
+  font-style: italic; }
+
+header {
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 0 15px 0px #7f7f7f;
+  margin-bottom: 2vh; }
+  header #topnav {
+    background: #263F89;
+    color: white;
+    height: 6vh;
+    font-weight: lighter;
+    font-size: .75em;
+    padding-right: 5%; }
+    header #topnav ul {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%; }
+      header #topnav ul li {
+        list-style: none;
+        margin: 0 2vw;
+        align-self: center;
+        position: relative; }
+        header #topnav ul li span {
+          margin-right: 2vw; }
+        header #topnav ul li img {
+          width: 13px;
+          position: absolute;
+          right: -5px;
+          bottom: 2px;
+          align-self: center; }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh; }
+    header nav img {
+      max-width: 18%;
+      align-self: center; }
+    header nav ul {
+      display: flex;
+      justify-content: space-around; }
+      header nav ul li {
+        align-self: center;
+        margin: 2vh;
+        color: #263F89;
+        font-weight: 600;
+        font-size: .9em; }
+    header nav button {
+      background: url("location-icon.e081f0f2.png");
+      background-position: 10% 50%;
+      background-repeat: no-repeat;
+      background-size: 7%;
+      border: 1.5px solid #446cdb;
+      border-radius: 3px;
+      min-height: 7vh;
+      min-width: 170px;
+      align-self: center;
+      color: #446cdb;
+      font-weight: 700;
+      font-size: .8em;
+      letter-spacing: .8px;
+      padding-left: 8px; }
+    header nav #menu {
+      display: none; }
+
+@media only screen and (max-width: 600px) {
+  header {
+    max-height: 9vh; }
+    header #topnav {
+      display: none; }
+    header nav {
+      justify-content: space-between; }
+      header nav img {
+        align-self: center;
+        max-width: 40%;
+        margin-left: 1vw; }
+      header nav ul {
+        display: none; }
+      header nav button {
+        background-size: 15%;
+        min-width: 30vw;
+        min-height: 5vh;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        font-weight: 800;
+        padding-left: 18px; }
+        header nav button span {
+          display: none; }
+      header nav #menu {
+        display: block;
+        max-width: 20vw;
+        align-self: baseline; } }
+
+main {
+  background-image: url("water-image.fffb680a.png");
+  background-position: center top;
+  background-repeat: no-repeat; }
+  main section {
+    padding-top: 15vh; }
+
+#select {
+  max-width: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+img, hr {
+  max-width: 95vw; }
