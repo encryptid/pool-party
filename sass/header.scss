@@ -1,0 +1,32 @@
+header {
+    
+    section {
+       background: $primary;
+       color: white;
+       height: 5vh;
+    //    display: none;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            height: 100%;
+
+            li {
+                list-style: none;
+                margin: 0 2vw;
+                align-self: center;
+                position: relative;
+
+                span {
+                    margin-right: 2vw;
+                }
+                img {
+                    position: absolute;
+                    right: -5px;
+                    bottom: -2px;
+
+                }
+            }
+        }
+    } 
+}
