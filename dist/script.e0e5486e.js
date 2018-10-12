@@ -169,17 +169,232 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../assets/fonts/ss-pika/webfonts/ss-pika.woff":[["ss-pika.1929865a.woff","assets/fonts/ss-pika/webfonts/ss-pika.woff"],"assets/fonts/ss-pika/webfonts/ss-pika.woff"],"./../assets/fonts/ss-pika/webfonts/ss-pika.ttf":[["ss-pika.532b09b1.ttf","assets/fonts/ss-pika/webfonts/ss-pika.ttf"],"assets/fonts/ss-pika/webfonts/ss-pika.ttf"],"./../assets/fonts/ss-pika/webfonts/ss-pika.svg":[["ss-pika.a8665590.svg","assets/fonts/ss-pika/webfonts/ss-pika.svg"],"assets/fonts/ss-pika/webfonts/ss-pika.svg"],"./../assets/fonts/open-sans/OpenSans-Regular.ttf":[["OpenSans-Regular.c6763146.ttf","assets/fonts/open-sans/OpenSans-Regular.ttf"],"assets/fonts/open-sans/OpenSans-Regular.ttf"],"./../assets/fonts/open-sans/OpenSans-Light.ttf":[["OpenSans-Light.b04b6148.ttf","assets/fonts/open-sans/OpenSans-Light.ttf"],"assets/fonts/open-sans/OpenSans-Light.ttf"],"./../assets/fonts/open-sans/OpenSans-Semibold.ttf":[["OpenSans-Semibold.385c3601.ttf","assets/fonts/open-sans/OpenSans-Semibold.ttf"],"assets/fonts/open-sans/OpenSans-Semibold.ttf"],"./../assets/fonts/open-sans/OpenSans-Bold.ttf":[["OpenSans-Bold.aa3c9b95.ttf","assets/fonts/open-sans/OpenSans-Bold.ttf"],"assets/fonts/open-sans/OpenSans-Bold.ttf"],"./../assets/fonts/open-sans/OpenSans-ExtraBold.ttf":[["OpenSans-ExtraBold.8f5df1a7.ttf","assets/fonts/open-sans/OpenSans-ExtraBold.ttf"],"assets/fonts/open-sans/OpenSans-ExtraBold.ttf"],"./../assets/fonts/open-sans/OpenSans-Italic.ttf":[["OpenSans-Italic.2c66fb5b.ttf","assets/fonts/open-sans/OpenSans-Italic.ttf"],"assets/fonts/open-sans/OpenSans-Italic.ttf"],"./../assets/fonts/open-sans/OpenSans-LightItalic.ttf":[["OpenSans-LightItalic.14754349.ttf","assets/fonts/open-sans/OpenSans-LightItalic.ttf"],"assets/fonts/open-sans/OpenSans-LightItalic.ttf"],"./../assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf":[["OpenSans-SemiboldItalic.81082f8e.ttf","assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf"],"assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf"],"./../assets/fonts/open-sans/OpenSans-BoldItalic.ttf":[["OpenSans-BoldItalic.6b9437c1.ttf","assets/fonts/open-sans/OpenSans-BoldItalic.ttf"],"assets/fonts/open-sans/OpenSans-BoldItalic.ttf"],"./../assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf":[["OpenSans-ExtraBoldItalic.f1dafbc2.ttf","assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf"],"assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf"],"./../assets/images/location-icon.png":[["location-icon.e081f0f2.png","assets/images/location-icon.png"],"assets/images/location-icon.png"],"./../images/water-image.png":[["water-image.fffb680a.png","images/water-image.png"],"images/water-image.png"],"_css_loader":"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/css-loader.js"}],"script.js":[function(require,module,exports) {
+},{"./../assets/fonts/ss-pika/webfonts/ss-pika.woff":[["ss-pika.1929865a.woff","assets/fonts/ss-pika/webfonts/ss-pika.woff"],"assets/fonts/ss-pika/webfonts/ss-pika.woff"],"./../assets/fonts/ss-pika/webfonts/ss-pika.ttf":[["ss-pika.532b09b1.ttf","assets/fonts/ss-pika/webfonts/ss-pika.ttf"],"assets/fonts/ss-pika/webfonts/ss-pika.ttf"],"./../assets/fonts/ss-pika/webfonts/ss-pika.svg":[["ss-pika.a8665590.svg","assets/fonts/ss-pika/webfonts/ss-pika.svg"],"assets/fonts/ss-pika/webfonts/ss-pika.svg"],"./../assets/fonts/open-sans/OpenSans-Regular.ttf":[["OpenSans-Regular.c6763146.ttf","assets/fonts/open-sans/OpenSans-Regular.ttf"],"assets/fonts/open-sans/OpenSans-Regular.ttf"],"./../assets/fonts/open-sans/OpenSans-Light.ttf":[["OpenSans-Light.b04b6148.ttf","assets/fonts/open-sans/OpenSans-Light.ttf"],"assets/fonts/open-sans/OpenSans-Light.ttf"],"./../assets/fonts/open-sans/OpenSans-Semibold.ttf":[["OpenSans-Semibold.385c3601.ttf","assets/fonts/open-sans/OpenSans-Semibold.ttf"],"assets/fonts/open-sans/OpenSans-Semibold.ttf"],"./../assets/fonts/open-sans/OpenSans-Bold.ttf":[["OpenSans-Bold.aa3c9b95.ttf","assets/fonts/open-sans/OpenSans-Bold.ttf"],"assets/fonts/open-sans/OpenSans-Bold.ttf"],"./../assets/fonts/open-sans/OpenSans-ExtraBold.ttf":[["OpenSans-ExtraBold.8f5df1a7.ttf","assets/fonts/open-sans/OpenSans-ExtraBold.ttf"],"assets/fonts/open-sans/OpenSans-ExtraBold.ttf"],"./../assets/fonts/open-sans/OpenSans-Italic.ttf":[["OpenSans-Italic.2c66fb5b.ttf","assets/fonts/open-sans/OpenSans-Italic.ttf"],"assets/fonts/open-sans/OpenSans-Italic.ttf"],"./../assets/fonts/open-sans/OpenSans-LightItalic.ttf":[["OpenSans-LightItalic.14754349.ttf","assets/fonts/open-sans/OpenSans-LightItalic.ttf"],"assets/fonts/open-sans/OpenSans-LightItalic.ttf"],"./../assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf":[["OpenSans-SemiboldItalic.81082f8e.ttf","assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf"],"assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf"],"./../assets/fonts/open-sans/OpenSans-BoldItalic.ttf":[["OpenSans-BoldItalic.6b9437c1.ttf","assets/fonts/open-sans/OpenSans-BoldItalic.ttf"],"assets/fonts/open-sans/OpenSans-BoldItalic.ttf"],"./../assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf":[["OpenSans-ExtraBoldItalic.f1dafbc2.ttf","assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf"],"assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf"],"./../assets/images/location-icon.png":[["location-icon.e081f0f2.png","assets/images/location-icon.png"],"assets/images/location-icon.png"],"./../assets/images/water-image.png":[["water-image.ded7917b.png","assets/images/water-image.png"],"assets/images/water-image.png"],"_css_loader":"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/css-loader.js"}],"assets/data/dealers.json":[function(require,module,exports) {
+module.exports = {
+    "zipcode": "28205",
+    "location": {
+        "lat": 35.2263714,
+        "lon": -80.7990185
+    },
+    "dealers": [{
+        "data": {
+            "companyID": 401929,
+            "name": "Aqua Experts",
+            "phone1": "1-888-234-5678",
+            "email": "info@aquaexperts.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "7:00am - 7:00pm",
+                "tue": "7:00am - 7:00pm",
+                "wed": "7:00am - 7:00pm",
+                "thu": "7:00am - 7:00pm",
+                "fri": "7:00am - 7:00pm",
+                "sat": "7:00am - 3:00pm",
+                "sun": ""
+            },
+            "certifications": ["Installation Pro", "Residential Pro", "Service Pro"]
+        }
+    }, {
+        "data": {
+            "companyID": 401928,
+            "name": "Premium Pools & Spas of Charlotte",
+            "phone1": "1-888-888-8888",
+            "email": "info@premiumpoolscharlotte.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "7:00am - 7:00pm",
+                "tue": "7:00am - 7:00pm",
+                "wed": "7:00am - 7:00pm",
+                "thu": "7:00am - 7:00pm",
+                "fri": "7:00am - 7:00pm",
+                "sat": "",
+                "sun": "On Call"
+            },
+            "certifications": ["Installation Pro", "Commercial Pro", "Residential Pro", "Service Pro"]
+        }
+    }, {
+        "data": {
+            "companyID": 401927,
+            "name": "Carolina Pool Specialists",
+            "phone1": "1-877-987-6543",
+            "email": "info@cps.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "8:00am - 5:00pm",
+                "tue": "8:00am - 5:00pm",
+                "wed": "8:00am - 5:00pm",
+                "thu": "8:00am - 5:00pm",
+                "fri": "8:00am - 5:00pm",
+                "sat": "8:00am - 5:00pm",
+                "sun": ""
+            },
+            "certifications": ["Installation Pro", "Commercial Pro", "Residential Pro", "Service Pro"]
+        }
+    }, {
+        "data": {
+            "companyID": 401926,
+            "name": "Pools'r'Us",
+            "phone1": "1-888-346-4574",
+            "email": "info@poolsrus.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "7:00am - 7:00pm",
+                "tue": "7:00am - 7:00pm",
+                "wed": "7:00am - 7:00pm",
+                "thu": "7:00am - 7:00pm",
+                "fri": "7:00am - 7:00pm",
+                "sat": "7:00am - 3:00pm",
+                "sun": "1:00pm - 5:00pm"
+            },
+            "certifications": ["Installation Pro", "Commercial Pro", "Residential Pro"]
+        }
+    }, {
+        "data": {
+            "companyID": 401925,
+            "name": "Clean Pool Systems",
+            "phone1": "1-888-246-7485",
+            "email": "info@cleanpools.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "7:00am - 7:00pm",
+                "tue": "7:00am - 7:00pm",
+                "wed": "7:00am - 7:00pm",
+                "thu": "7:00am - 7:00pm",
+                "fri": "7:00am - 7:00pm",
+                "sat": "7:00am - 3:00pm",
+                "sun": ""
+            },
+            "certifications": ["Installation Pro", "Residential Pro"]
+        }
+    }, {
+        "data": {
+            "companyID": 401924,
+            "name": "Pool Service Pros",
+            "phone1": "1-888-PRO-POOL",
+            "email": "info@propool.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "7:00am - 7:00pm",
+                "tue": "7:00am - 7:00pm",
+                "wed": "7:00am - 7:00pm",
+                "thu": "7:00am - 7:00pm",
+                "fri": "7:00am - 7:00pm",
+                "sat": "7:00am - 3:00pm",
+                "sun": ""
+            },
+            "certifications": ["Installation Pro", "Commercial Pro", "Residential Pro", "Service Pro"]
+        }
+    }, {
+        "data": {
+            "companyID": 401923,
+            "name": "Talent Pool",
+            "phone1": "1-888-797-3463",
+            "email": "info@talentpool.com",
+            "addressLine1": "1234 Some Street",
+            "addressLine2": "",
+            "city": "Charlotte",
+            "state": "North Carolina",
+            "country": "US",
+            "zipcode": "28205",
+            "weekHours": {
+                "mon": "7:00am - 7:00pm",
+                "tue": "7:00am - 7:00pm",
+                "wed": "7:00am - 7:00pm",
+                "thu": "7:00am - 7:00pm",
+                "fri": "7:00am - 7:00pm",
+                "sat": "7:00am - 7:00pm",
+                "sun": "7:00am - 7:00pm"
+            },
+            "certifications": ["Installation Pro", "Commercial Pro", "Service Pro"]
+        }
+    }]
+};
+},{}],"pool-party.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dealers = require('./assets/data/dealers.json');
+
+var poolDealers = _interopRequireWildcard(_dealers);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PoolParty = function () {
+    function PoolParty() {
+        _classCallCheck(this, PoolParty);
+
+        this.poolFilter();
+    }
+
+    //Function 1: enables UI interactivity (click actions, event listeners, etc.)
+    //Function 2: performs filtering
+    //Function 3: for rendering. It will accept the filtered data as a parameter
+
+    _createClass(PoolParty, [{
+        key: 'poolFilter',
+        value: function poolFilter() {
+            console.log(poolDealers);
+        }
+    }]);
+
+    return PoolParty;
+}();
+
+exports.default = PoolParty;
+},{"./assets/data/dealers.json":"assets/data/dealers.json"}],"script.js":[function(require,module,exports) {
 'use strict';
 
 require('./sass/style.scss');
 
-var init = function init() {
-  return console.log('pool partay!');
-};
+var _poolParty = require('./pool-party');
 
-window.addEventListener('load', init());
-},{"./sass/style.scss":"sass/style.scss"}],"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _poolParty2 = _interopRequireDefault(_poolParty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var poolParty = new _poolParty2.default();
+
+// const init = () => console.log('pool partay!');
+
+// window.addEventListener('load', init());
+},{"./sass/style.scss":"sass/style.scss","./pool-party":"pool-party.js"}],"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -208,7 +423,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63188' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63553' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
