@@ -25,8 +25,8 @@ main {
                     color: $accent;
                     font-weight: 600;
                     font-size: .9em;
-                    border-right: 2px solid #ebebeb;
-                    height: 70%;
+                    border-right: 2px solid $border;
+                    max-height: 70%;
                     padding: 0 2vw;
                     line-height: 3.5em;
                 }
@@ -42,6 +42,10 @@ main {
                         letter-spacing: .5px;
                         font-weight: 700;
                         margin-right: 3vw;
+                    }
+
+                    #drop {
+                        display: none;
                     }
                     
                     * {
@@ -68,8 +72,8 @@ main {
                         color: $accent;
                         font-weight: 600;
                         padding: 5px;
-                        background: #ebebeb;
-                        border-radius: 0 2px;
+                        background: $border;
+                        border-radius: 2px;
                         line-height: .55em;
                     }
                     #help:hover {
@@ -83,37 +87,89 @@ main {
 
 
 @media only screen and (max-width: 600px) {
-    .wrapper {
-        #select {
-         display: inline-block;
-         position: relative;
-         min-width: 100%;
-         
-         #count {
-            //  line-height: .5em;
+    main {
+        .wrapper {
+            padding-top: 17vh;
+            margin-bottom: 5vh;
+            #select {
             display: block;
-             min-width: 45%;
-            //  position: absolute;
-             border-right: none !important;
-             left: 0;
-             top: 0;
-            }
-
-            fieldset {
-                position: relative;
-                min-width: 90%;
-                background: #fff;
-                #legend {
-                    display: inline-block;
-                    background: #fff;
-                    border: 1px solid #ebebeb;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+            position: relative;
+            min-width: 100%;
+            min-height: 50vh;
+            
+            #count {
+                display: block;
+                border-right: none;
+                min-width: 45%;
+                max-height: 8vh;
+                font-size: 1em;
+                letter-spacing: .7px;
+                padding-top: 2vh;
                 }
 
-                div {
-                    min-width: 90%;
+                fieldset {
+                    max-width: 95%;
+                    background: #fff;
+                    display: block;
+                    margin: 0 auto;
+                    position: relative;
+                    border: 1px solid $border;
+                    
+                    #legend {
+                        display: block;
+                        background: #fff;
+                        border: 1px solid $border;
+                        width: 35vw;
+                        height: 5vh;
+                        position: absolute;
+                        top: -53px;
+                        right: 43px;
+                        text-align: center;
+                        padding-top: 3vh;
+                    }
+
+                    #drop {
+                        display: block;
+                        background: $select;
+                        width: 15vw;
+                        height: 4.8vh;
+                        border: 1px solid $border;
+                        text-align: center;
+                        padding-top: 3.2vh;
+                        position: absolute;
+                        right: -1px;
+                        top: -53px;
+                    }
+
+                    div {
+                        display: block;
+                        font-size: 2em;
+                        margin: 7vh 5vw;
+
+                        input {
+                            margin-left: 4vw;
+                        }
+
+                        label {
+                            margin-left: 3vw;
+                        }
+                    }
+
+                    #first-box {
+                        margin-top: 3vh;
+                    }
+                    #last-box {
+                        margin-bottom: 4vh;
+                    }
+
+                    #help {
+                        position: absolute;
+                        bottom: 3.8vh;
+                        right: 40vw;
+                        text-align: center;
+                        padding: 8px 8px;
+                        border-radius: 3px;
+                    }
                 }
             }
         }
