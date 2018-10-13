@@ -32,26 +32,28 @@
         </nav>
     </header>
     <main>
-        <!-- <img id='banner' src='assets/images/water-image.png' alt='water surface banner'> -->
+        <!-- Checkbox section -->
         <div class="wrapper">
             <section id="select">
                     <span id="count">7 dealers in 28226</span>
                     <fieldset>
-                        <span id="legend">Filter results</span>
-                        <span id="drop">&#x25BC;</span>
-                        <div id="first-box">
+                        <div id='legend-wrap'>
+                            <span id="legend">Filter results</span>
+                            <span id="drop">&#x25BC;</span>
+                        </div>
+                        <div class="check" id="first-box">
                             <input type="checkbox" id="service" name="option" value="service" checked />
                             <label for="service">Service</label>
                         </div>
-                        <div>
+                        <div class="check">
                             <input type="checkbox" id="install" name="option" value="install" checked />
                             <label for="install">Installation</label>
                         </div>
-                        <div>
+                        <div class="check">
                             <input type="checkbox" id="res" name="option" value="res" checked />
                             <label for="res">Residential</label>
                         </div>
-                        <div id="last-box">
+                        <div class="check" id="last-box">
                             <input type="checkbox" id="comm" name="option" value="comm" unchecked />
                             <label for="comm">Commercial</label>
                         </div>
@@ -59,6 +61,7 @@
                     </fieldset>
             </section>
         </div>
+        <!-- Card display section -->
         <div class="cards">
         <section class="card">
             <h3>Title1</h3>

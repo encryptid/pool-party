@@ -207,6 +207,7 @@ main {
         font-size: .9em;
         border-right: 2px solid #d7d7d7;
         max-height: 70%;
+        min-width: 160px;
         padding: 0 2vw;
         line-height: 3.5em; }
       main .wrapper #select fieldset {
@@ -214,17 +215,16 @@ main {
         font-size: .55em;
         margin-left: 2vw;
         display: inline-block; }
-        main .wrapper #select fieldset #legend {
+        main .wrapper #select fieldset #legend-wrap #legend {
           font-size: 1.5em;
           letter-spacing: .5px;
           font-weight: 700;
           margin-right: 3vw; }
-        main .wrapper #select fieldset #drop {
+        main .wrapper #select fieldset #legend-wrap #drop {
           display: none; }
-        main .wrapper #select fieldset * {
-          display: inline-block; }
         main .wrapper #select fieldset div {
-          color: #4d4d4d; }
+          color: #4d4d4d;
+          display: inline-block; }
           main .wrapper #select fieldset div input {
             margin: 0 .5vw; }
           main .wrapper #select fieldset div label {
@@ -262,36 +262,41 @@ main {
         display: block;
         margin: 0 auto;
         position: relative;
-        border: 1px solid #d7d7d7; }
-        main .wrapper #select fieldset #legend {
-          display: block;
-          background: #fff;
-          border: 1px solid #d7d7d7;
-          width: 35vw;
-          height: 5vh;
+        border: 1px solid #d7d7d7;
+        z-index: 100; }
+        main .wrapper #select fieldset #legend-wrap {
           position: absolute;
           top: -53px;
-          right: 43px;
-          text-align: center;
-          padding-top: 3vh; }
-        main .wrapper #select fieldset #drop {
-          display: block;
-          background: #f6f6f6;
-          width: 15vw;
-          height: 4.8vh;
-          border: 1px solid #d7d7d7;
-          text-align: center;
-          padding-top: 3.2vh;
-          position: absolute;
           right: -1px;
-          top: -53px; }
-        main .wrapper #select fieldset div {
+          z-index: 0; }
+          main .wrapper #select fieldset #legend-wrap #legend {
+            display: inline-block;
+            background: #fff;
+            border: 1px solid #d7d7d7;
+            width: 150px;
+            height: 60px;
+            text-align: center;
+            padding-top: 25px;
+            margin-right: -4px; }
+          main .wrapper #select fieldset #legend-wrap #drop {
+            display: inline-block;
+            background: #f6f6f6;
+            border: 1px solid #d7d7d7;
+            width: 45px;
+            height: 60px;
+            text-align: center;
+            padding-top: 25px;
+            position: relative;
+            top: -4px; }
+        main .wrapper #select fieldset .check {
           display: block;
           font-size: 2em;
-          margin: 7vh 5vw; }
-          main .wrapper #select fieldset div input {
+          margin: 7vh 5vw;
+          position: relative;
+          z-index: 1000; }
+          main .wrapper #select fieldset .check input {
             margin-left: 4vw; }
-          main .wrapper #select fieldset div label {
+          main .wrapper #select fieldset .check label {
             margin-left: 3vw; }
         main .wrapper #select fieldset #first-box {
           margin-top: 3vh; }

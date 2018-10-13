@@ -27,6 +27,7 @@ main {
                     font-size: .9em;
                     border-right: 2px solid $border;
                     max-height: 70%;
+                    min-width: 160px;
                     padding: 0 2vw;
                     line-height: 3.5em;
                 }
@@ -37,23 +38,22 @@ main {
                     margin-left: 2vw;
                     display: inline-block;
 
-                    #legend {
-                        font-size: 1.5em;
-                        letter-spacing: .5px;
-                        font-weight: 700;
-                        margin-right: 3vw;
-                    }
+                    #legend-wrap {
+                        #legend {
+                            font-size: 1.5em;
+                            letter-spacing: .5px;
+                            font-weight: 700;
+                            margin-right: 3vw;
+                        }
 
-                    #drop {
-                        display: none;
-                    }
-                    
-                    * {
-                    display: inline-block;
+                        #drop {
+                            display: none;
+                        }
                     }
 
                     div {
                         color: #4d4d4d;
+                        display: inline-block;
 
                         input {
                             margin: 0 .5vw;
@@ -91,6 +91,7 @@ main {
         .wrapper {
             padding-top: 17vh;
             margin-bottom: 5vh;
+
             #select {
             display: block;
             position: relative;
@@ -114,37 +115,43 @@ main {
                     margin: 0 auto;
                     position: relative;
                     border: 1px solid $border;
+                    z-index: 100;
                     
-                    #legend {
-                        display: block;
-                        background: #fff;
-                        border: 1px solid $border;
-                        width: 35vw;
-                        height: 5vh;
+                    #legend-wrap {
                         position: absolute;
                         top: -53px;
-                        right: 43px;
-                        text-align: center;
-                        padding-top: 3vh;
-                    }
-
-                    #drop {
-                        display: block;
-                        background: $select;
-                        width: 15vw;
-                        height: 4.8vh;
-                        border: 1px solid $border;
-                        text-align: center;
-                        padding-top: 3.2vh;
-                        position: absolute;
                         right: -1px;
-                        top: -53px;
-                    }
+                        z-index: 0;
 
-                    div {
+                        #legend {
+                            display: inline-block;
+                            background: #fff;
+                            border: 1px solid $border;
+                            width: 150px;
+                            height: 60px;
+                            text-align: center;
+                            padding-top: 25px;
+                            margin-right: -4px;
+                        }
+
+                        #drop {
+                            display: inline-block;
+                            background: $select;
+                            border: 1px solid $border;
+                            width: 45px;
+                            height: 60px;
+                            text-align: center;
+                            padding-top: 25px;
+                            position: relative;
+                            top: -4px;
+                        }
+                    }
+                    .check {
                         display: block;
                         font-size: 2em;
                         margin: 7vh 5vw;
+                        position: relative;
+                        z-index: 1000;
 
                         input {
                             margin-left: 4vw;
