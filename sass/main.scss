@@ -97,6 +97,7 @@ main {
             position: relative;
             min-width: 100%;
             min-height: 50vh;
+            z-index: 100;
             
             #count {
                 display: block;
@@ -115,22 +116,24 @@ main {
                     margin: 0 auto;
                     position: relative;
                     border: 1px solid $border;
-                    z-index: 100;
+                    z-index: initial;
                     
                     #legend-wrap {
                         position: absolute;
                         top: -53px;
                         right: -1px;
-                        z-index: 0;
+                        z-index: -1;
 
                         #legend {
                             display: inline-block;
+                            font-size: 1.7em;
+                            font-weight: 600;
                             background: #fff;
                             border: 1px solid $border;
                             width: 150px;
-                            height: 60px;
+                            height: 46px;
                             text-align: center;
-                            padding-top: 25px;
+                            padding-top: 15px;
                             margin-right: -4px;
                         }
 
@@ -139,11 +142,11 @@ main {
                             background: $select;
                             border: 1px solid $border;
                             width: 45px;
-                            height: 60px;
+                            height: 46px;
                             text-align: center;
-                            padding-top: 25px;
+                            padding-top: 19px;
                             position: relative;
-                            top: -4px;
+                            top: -2px;
                         }
                     }
                     .check {

@@ -1,3 +1,33 @@
 .cards {
-    display: block;
+    display: flex;
+    max-width: 80vw;
+    margin: 0 auto;
+    // margin-top: 10px;
+
+    .card {
+        // display: inline-block;
+        max-width: 30%;
+        // min-height: 312px;
+        margin: 3vh auto;
+        border: 1px solid $border;
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 
+            -2px 2px 2px 0px $shadow,
+             2px 0px 0px 0px $shadow;
+        position: relative;
+
+        h3 {
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        footer {
+            background: $select;
+            position: relative;
+            bottom: -30px;
+            width: 100%;
+        }
+    } 
+
 }
