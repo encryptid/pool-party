@@ -6,6 +6,8 @@ main {
     .wrapper {
         padding-top: 16vh;
 
+        .wrapper-wrapper {
+
         #select {
             display: flex;
             justify-content: center;
@@ -82,103 +84,108 @@ main {
                 }
             }
         }
-    // }
+    }
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 740px) {
     main {
         .wrapper {
             padding-top: 17vh;
             margin-bottom: 5vh;
+            .wrapper-wrapper {
+                padding-bottom: 25px;
+                background: $select;
+                border-bottom: 1px solid $border;
 
-            #select {
-            display: block;
-            position: relative;
-            min-width: 100%;
-            min-height: 50vh;
-            z-index: 100;
-            
-            #count {
+                #select {
                 display: block;
-                border-right: none;
-                min-width: 45%;
-                max-height: 8vh;
-                font-size: 1em;
-                letter-spacing: .7px;
-                padding-top: 2vh;
-                }
-
-                fieldset {
-                    max-width: 95%;
-                    background: #fff;
+                position: relative;
+                min-width: 100%;
+                min-height: 50vh;
+                z-index: 100;
+                
+                #count {
                     display: block;
-                    margin: 0 auto;
-                    position: relative;
-                    border: 1px solid $border;
-                    z-index: initial;
-                    
-                    #legend-wrap {
-                        position: absolute;
-                        top: -53px;
-                        right: -1px;
-                        z-index: -1;
-
-                        #legend {
-                            display: inline-block;
-                            font-size: 1.7em;
-                            font-weight: 600;
-                            background: #fff;
-                            border: 1px solid $border;
-                            width: 150px;
-                            height: 46px;
-                            text-align: center;
-                            padding-top: 15px;
-                            margin-right: -4px;
-                        }
-
-                        #drop {
-                            display: inline-block;
-                            background: $select;
-                            border: 1px solid $border;
-                            width: 45px;
-                            height: 46px;
-                            text-align: center;
-                            padding-top: 19px;
-                            position: relative;
-                            top: -2px;
-                        }
+                    border-right: none;
+                    min-width: 45%;
+                    max-height: 8vh;
+                    font-size: 1em;
+                    letter-spacing: .7px;
+                    padding-top: 2vh;
                     }
-                    .check {
+
+                    fieldset {
+                        max-width: 95%;
+                        background: #fff;
                         display: block;
-                        font-size: 2em;
-                        margin: 7vh 5vw;
+                        margin: 0 auto;
                         position: relative;
-                        z-index: 1000;
+                        border: 1px solid $border;
+                        z-index: initial;
+                        
+                        #legend-wrap {
+                            position: absolute;
+                            top: -53px;
+                            right: -1px;
+                            z-index: -1;
 
-                        input {
-                            margin-left: 4vw;
+                            #legend {
+                                display: inline-block;
+                                font-size: 1.7em;
+                                font-weight: 600;
+                                background: #fff;
+                                border: 1px solid $border;
+                                width: 150px;
+                                height: 46px;
+                                text-align: center;
+                                padding-top: 15px;
+                                margin-right: -4px;
+                            }
+
+                            #drop {
+                                display: inline-block;
+                                background: $select;
+                                border: 1px solid $border;
+                                width: 45px;
+                                height: 46px;
+                                text-align: center;
+                                padding-top: 19px;
+                                position: relative;
+                                top: -2px;
+                            }
+                        }
+                        .check {
+                            display: block;
+                            font-size: 2em;
+                            margin: 7vh 5vw;
+                            position: relative;
+                            z-index: 1000;
+
+                            input {
+                                margin-left: 4vw;
+                            }
+
+                            label {
+                                margin-left: 3vw;
+                            }
                         }
 
-                        label {
-                            margin-left: 3vw;
+                        #first-box {
+                            margin-top: 3vh;
                         }
-                    }
+                        #last-box {
+                            margin-bottom: 4vh;
+                        }
 
-                    #first-box {
-                        margin-top: 3vh;
-                    }
-                    #last-box {
-                        margin-bottom: 4vh;
-                    }
-
-                    #help {
-                        position: absolute;
-                        bottom: 3.8vh;
-                        right: 40vw;
-                        text-align: center;
-                        padding: 8px 8px;
-                        border-radius: 3px;
+                        #help {
+                            position: absolute;
+                            bottom: 3.8vh;
+                            right: 40vw;
+                            text-align: center;
+                            padding: 8px 8px;
+                            border-radius: 3px;
+                        }
                     }
                 }
             }

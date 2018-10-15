@@ -5,7 +5,8 @@
     // margin-top: 10px;
 
     .card {
-        max-width: 30%;
+        width: 30%;
+        // min-width: 180px;
         // min-height: 312px;
         margin: 3vh .6vw;
         border: 1px solid $card-shadow;
@@ -38,23 +39,31 @@
             height: 2px;
         }
 
-        #phone {
-            text-align: center;
-            margin-top: 10px;
-            position: relative;
-
-            img {
-                height: 23px;
-                padding-top: 10px;
+        a {
+            text-decoration: none;
+            color: black;
+            #phone {
+                text-align: center;
+                margin-top: 10px;
                 position: relative;
-                top: 5px;
-                margin: 0 10px;
-            }
-            
-            span {
-                font-weight: 700;
-                font-size: 1.3em;
-                letter-spacing: .5px;
+
+                .mobile {
+                    display: none;
+                }
+
+                img {
+                    height: 23px;
+                    padding-top: 10px;
+                    position: relative;
+                    top: 5px;
+                    margin: 0 10px;
+                }
+                
+                span {
+                    font-weight: 700;
+                    font-size: 1.3em;
+                    letter-spacing: .5px;
+                }
             }
         }
 
@@ -141,6 +150,91 @@
 
 }
 
-// @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 740px) {
+    .cards {
+        flex-direction: column;
+        min-width: 90%;
+        // align-content: center;
+        align-items: center;
+        .card {
+            // min-width: 60vw;
+            min-width: 90%;
+            margin-top: -45px;
+            position: relative;
+            border-radius: 0;
+            z-index: -1;
 
-// }
+            hr {
+                display: none;
+            }
+
+            a {
+                #phone {
+                    background: $accent;
+                    height: 40px;
+                    color: white;
+                    width: 80%;
+                    margin: 0 auto;
+                    padding-bottom: 8px;
+
+                    .desktop {
+                        display: none;
+                    }
+                    .mobile {
+                        display: inline-block;
+                        z-index: 1;
+                    }
+                    #tel {
+                        // position: relative;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 5px;
+                        float: left;
+                        top: 0;   
+                    }
+
+                    #ttc {
+                        font-size: .2em;
+                        margin-top: 16px;
+                    }
+                    #tel-num {
+                        margin-right: 15px;
+                        margin-top: 8px;
+                        float: right;
+                    }
+                }
+            }
+
+            footer {
+                z-index: 0;
+            }
+        }
+        :nth-child(2) {
+            z-index: -2;
+        }
+        :nth-child(3) {
+            z-index: -3;
+        }
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .cards {
+        .card {
+            a {
+                #phone {
+                    #ttc {
+                        display: block;
+                        padding-top: 3px;
+                    }
+                    #tel-num {
+                        display: block;
+                        margin: 0;
+                        float: none;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}

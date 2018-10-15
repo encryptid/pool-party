@@ -34,32 +34,34 @@
     <main>
         <!-- Checkbox section -->
         <div class="wrapper">
-            <section id="select">
-                <span id="count">7 dealers in 28226</span>
-                <fieldset>
-                    <div id="legend-wrap">
-                        <span id="legend">Filter Results</span>
-                        <span id="drop">&#x25BC;</span>
-                    </div>
-                    <div class="check" id="first-box">
-                        <input type="checkbox" id="service" name="option" value="service" checked="">
-                        <label for="service">Service</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="install" name="option" value="install" checked="">
-                        <label for="install">Installation</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="res" name="option" value="res" checked="">
-                        <label for="res">Residential</label>
-                    </div>
-                    <div class="check" id="last-box">
-                        <input type="checkbox" id="comm" name="option" value="comm" unchecked="">
-                        <label for="comm">Commercial</label>
-                    </div>
-                    <span id="help">?</span>
-                </fieldset>
-            </section>
+            <div class="wrapper-wrapper">
+                <section id="select">
+                    <span id="count">7 dealers in 28226</span>
+                    <fieldset>
+                        <div id="legend-wrap">
+                            <span id="legend">Filter Results</span>
+                            <span id="drop">&#x25BC;</span>
+                        </div>
+                        <div class="check" id="first-box">
+                            <input type="checkbox" id="service" name="option" value="service" checked="">
+                            <label for="service">Service</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="install" name="option" value="install" checked="">
+                            <label for="install">Installation</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="res" name="option" value="res" checked="">
+                            <label for="res">Residential</label>
+                        </div>
+                        <div class="check" id="last-box">
+                            <input type="checkbox" id="comm" name="option" value="comm" unchecked="">
+                            <label for="comm">Commercial</label>
+                        </div>
+                        <span id="help">?</span>
+                    </fieldset>
+                </section>
+            </div>
         </div>
         <!-- Card display section -->
         <div class="cards">
@@ -68,10 +70,14 @@
                     <h3>Title1</h3>
                 </div>
                 <hr>
-                <div id="phone">
-                    <img src="/phone-icon-desktop.def3d16e.png">
-                    <span>1.888.888.8888</span>
-                </div>
+                <a href="tel:18888888888">
+                    <div id="phone">
+                        <img class="desktop" src="/phone-icon-desktop.def3d16e.png">
+                        <img class="mobile" id="tel" src="/phone-icon-mobile.56447521.png">
+                        <span class="mobile" id="ttc">Tap to call</span>
+                        <span id="tel-num">1.888.888.8888</span>
+                    </div>
+                </a>
                 <p>Can't talk now? Click below to send an email.</p>
                 <button><img src="/email-icon.456ea340.png"><span>Contact this Pro</span></button>
                 <div id="hours">
@@ -100,10 +106,14 @@
                     <h3>Title2</h3>
                 </div>
                 <hr>
-                <div id="phone">
-                    <img src="/phone-icon-desktop.def3d16e.png">
-                    <span>1.888.888.8888</span>
-                </div>
+                <a href="tel:18888888888">
+                    <div id="phone">
+                        <img class="desktop" src="/phone-icon-desktop.def3d16e.png">
+                        <img class="mobile" id="tel" src="/phone-icon-mobile.56447521.png">
+                        <span class="mobile" id="ttc">Tap to call</span>
+                        <span id="tel-num">1.888.888.8888</span>
+                    </div>
+                </a>
                 <p>Can't talk now? Click below to send an email.</p>
                 <button><img src="/email-icon.456ea340.png"><span>Contact this Pro</span></button>
                 <div id="hours">
@@ -136,12 +146,16 @@
                     <h3>Title3</h3>
                 </div>
                 <hr>
-                <div id="phone">
-                    <img src="/phone-icon-desktop.def3d16e.png">
-                    <span>1.888.888.8888</span>
-                </div>
+                <a href="tel:1.888.888.8888">
+                    <div id="phone">
+                        <img class="desktop" src="/phone-icon-desktop.def3d16e.png">
+                        <img class="mobile" id="tel" src="/phone-icon-mobile.56447521.png">
+                        <span class="mobile" id="ttc">Tap to call</span>
+                        <span id="tel-num">1.888.888.8888</span>
+                    </div>
+                </a>
                 <p>Can't talk now? Click below to send an email.</p>
-                <button><img src="/email-icon.456ea340.png">Contact this Pro</button>
+                <button><img src="/email-icon.456ea340.png"><span>Contact this Pro</span></button>
                 <div id="hours">
                     <h4>Business Hours</h4>
                     <p>Weekdays 7:00am - 7:00pm</p>
@@ -164,11 +178,13 @@
     </main>
     <footer>
         <section>
-            <img src="/pool-pros-logo-footer.7566bbc6.png">
-            <span>CONNECT WITH US</span>
-            <img src="/twitter-icon.e7f12f5e.png">
-            <img src="/facebook-icon.153f27c9.png">
-            <img src="/youtube-icon.663ce224.png">
+            <img id="pp-logo" src="/pool-pros-logo-footer.7566bbc6.png">
+            <div id="connect-box">
+                <span>CONNECT WITH US</span>
+                <img class="social" src="/twitter-icon.e7f12f5e.png">
+                <img class="social" src="/facebook-icon.153f27c9.png">
+                <img class="social" src="/youtube-icon.663ce224.png">
+            </div>
         </section>
         <p>&copy;2018 Pool Pros | Privacy Policy | Terms and Conditions</p>
     </footer>

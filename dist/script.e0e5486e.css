@@ -192,7 +192,7 @@ main {
   background-repeat: no-repeat; }
   main .wrapper {
     padding-top: 16vh; }
-    main .wrapper #select {
+    main .wrapper .wrapper-wrapper #select {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -201,7 +201,7 @@ main {
       max-width: 80vw;
       margin: 0 auto;
       border-radius: 8px; }
-      main .wrapper #select #count {
+      main .wrapper .wrapper-wrapper #select #count {
         color: #446cdb;
         font-weight: 600;
         font-size: .9em;
@@ -209,115 +209,119 @@ main {
         max-height: 70%;
         min-width: 160px;
         line-height: 3.5em; }
-      main .wrapper #select fieldset {
+      main .wrapper .wrapper-wrapper #select fieldset {
         border: none;
         font-size: .55em;
         margin-left: 2vw;
         display: inline-block; }
-        main .wrapper #select fieldset #legend-wrap #legend {
+        main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #legend {
           font-size: 1.5em;
           letter-spacing: .5px;
           font-weight: 700;
           margin-right: 3vw; }
-        main .wrapper #select fieldset #legend-wrap #drop {
+        main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #drop {
           display: none; }
-        main .wrapper #select fieldset div {
+        main .wrapper .wrapper-wrapper #select fieldset div {
           color: #4d4d4d;
           display: inline-block; }
-          main .wrapper #select fieldset div input {
+          main .wrapper .wrapper-wrapper #select fieldset div input {
             margin: 0 .5vw; }
-          main .wrapper #select fieldset div label {
+          main .wrapper .wrapper-wrapper #select fieldset div label {
             margin-right: 2vw; }
-        main .wrapper #select fieldset #help {
+        main .wrapper .wrapper-wrapper #select fieldset #help {
           color: #446cdb;
           font-weight: 600;
           padding: 5px;
           background: #d7d7d7;
           border-radius: 2px;
           line-height: .55em; }
-        main .wrapper #select fieldset #help:hover {
+        main .wrapper .wrapper-wrapper #select fieldset #help:hover {
           cursor: pointer; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 740px) {
   main .wrapper {
     padding-top: 17vh;
     margin-bottom: 5vh; }
-    main .wrapper #select {
-      display: block;
-      position: relative;
-      min-width: 100%;
-      min-height: 50vh;
-      z-index: 100; }
-      main .wrapper #select #count {
+    main .wrapper .wrapper-wrapper {
+      padding-bottom: 25px;
+      background: #f6f6f6;
+      border-bottom: 1px solid #d7d7d7; }
+      main .wrapper .wrapper-wrapper #select {
         display: block;
-        border-right: none;
-        min-width: 45%;
-        max-height: 8vh;
-        font-size: 1em;
-        letter-spacing: .7px;
-        padding-top: 2vh; }
-      main .wrapper #select fieldset {
-        max-width: 95%;
-        background: #fff;
-        display: block;
-        margin: 0 auto;
         position: relative;
-        border: 1px solid #d7d7d7;
-        z-index: initial; }
-        main .wrapper #select fieldset #legend-wrap {
-          position: absolute;
-          top: -53px;
-          right: -1px;
-          z-index: -1; }
-          main .wrapper #select fieldset #legend-wrap #legend {
-            display: inline-block;
-            font-size: 1.7em;
-            font-weight: 600;
-            background: #fff;
-            border: 1px solid #d7d7d7;
-            width: 150px;
-            height: 46px;
-            text-align: center;
-            padding-top: 15px;
-            margin-right: -4px; }
-          main .wrapper #select fieldset #legend-wrap #drop {
-            display: inline-block;
-            background: #f6f6f6;
-            border: 1px solid #d7d7d7;
-            width: 45px;
-            height: 46px;
-            text-align: center;
-            padding-top: 19px;
-            position: relative;
-            top: -2px; }
-        main .wrapper #select fieldset .check {
+        min-width: 100%;
+        min-height: 50vh;
+        z-index: 100; }
+        main .wrapper .wrapper-wrapper #select #count {
           display: block;
-          font-size: 2em;
-          margin: 7vh 5vw;
+          border-right: none;
+          min-width: 45%;
+          max-height: 8vh;
+          font-size: 1em;
+          letter-spacing: .7px;
+          padding-top: 2vh; }
+        main .wrapper .wrapper-wrapper #select fieldset {
+          max-width: 95%;
+          background: #fff;
+          display: block;
+          margin: 0 auto;
           position: relative;
-          z-index: 1000; }
-          main .wrapper #select fieldset .check input {
-            margin-left: 4vw; }
-          main .wrapper #select fieldset .check label {
-            margin-left: 3vw; }
-        main .wrapper #select fieldset #first-box {
-          margin-top: 3vh; }
-        main .wrapper #select fieldset #last-box {
-          margin-bottom: 4vh; }
-        main .wrapper #select fieldset #help {
-          position: absolute;
-          bottom: 3.8vh;
-          right: 40vw;
-          text-align: center;
-          padding: 8px 8px;
-          border-radius: 3px; } }
+          border: 1px solid #d7d7d7;
+          z-index: initial; }
+          main .wrapper .wrapper-wrapper #select fieldset #legend-wrap {
+            position: absolute;
+            top: -53px;
+            right: -1px;
+            z-index: -1; }
+            main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #legend {
+              display: inline-block;
+              font-size: 1.7em;
+              font-weight: 600;
+              background: #fff;
+              border: 1px solid #d7d7d7;
+              width: 150px;
+              height: 46px;
+              text-align: center;
+              padding-top: 15px;
+              margin-right: -4px; }
+            main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #drop {
+              display: inline-block;
+              background: #f6f6f6;
+              border: 1px solid #d7d7d7;
+              width: 45px;
+              height: 46px;
+              text-align: center;
+              padding-top: 19px;
+              position: relative;
+              top: -2px; }
+          main .wrapper .wrapper-wrapper #select fieldset .check {
+            display: block;
+            font-size: 2em;
+            margin: 7vh 5vw;
+            position: relative;
+            z-index: 1000; }
+            main .wrapper .wrapper-wrapper #select fieldset .check input {
+              margin-left: 4vw; }
+            main .wrapper .wrapper-wrapper #select fieldset .check label {
+              margin-left: 3vw; }
+          main .wrapper .wrapper-wrapper #select fieldset #first-box {
+            margin-top: 3vh; }
+          main .wrapper .wrapper-wrapper #select fieldset #last-box {
+            margin-bottom: 4vh; }
+          main .wrapper .wrapper-wrapper #select fieldset #help {
+            position: absolute;
+            bottom: 3.8vh;
+            right: 40vw;
+            text-align: center;
+            padding: 8px 8px;
+            border-radius: 3px; } }
 
 .cards {
   display: flex;
   max-width: 80vw;
   margin: 0 auto; }
   .cards .card {
-    max-width: 30%;
+    width: 30%;
     margin: 3vh .6vw;
     border: 1px solid #e9e9e9;
     border-radius: 12px;
@@ -340,20 +344,25 @@ main {
       border: none;
       border-radius: 5px;
       height: 2px; }
-    .cards .card #phone {
-      text-align: center;
-      margin-top: 10px;
-      position: relative; }
-      .cards .card #phone img {
-        height: 23px;
-        padding-top: 10px;
-        position: relative;
-        top: 5px;
-        margin: 0 10px; }
-      .cards .card #phone span {
-        font-weight: 700;
-        font-size: 1.3em;
-        letter-spacing: .5px; }
+    .cards .card a {
+      text-decoration: none;
+      color: black; }
+      .cards .card a #phone {
+        text-align: center;
+        margin-top: 10px;
+        position: relative; }
+        .cards .card a #phone .mobile {
+          display: none; }
+        .cards .card a #phone img {
+          height: 23px;
+          padding-top: 10px;
+          position: relative;
+          top: 5px;
+          margin: 0 10px; }
+        .cards .card a #phone span {
+          font-weight: 700;
+          font-size: 1.3em;
+          letter-spacing: .5px; }
     .cards .card p {
       font-style: italic;
       font-size: .6em;
@@ -410,6 +419,79 @@ main {
           margin-right: 5px; }
         .cards .card footer .icon span {
           color: #6a6a6a; }
+
+@media only screen and (max-width: 740px) {
+  .cards {
+    flex-direction: column;
+    min-width: 90%;
+    align-items: center; }
+    .cards .card {
+      min-width: 90%;
+      margin-top: -45px;
+      position: relative;
+      border-radius: 0;
+      z-index: -1; }
+      .cards .card hr {
+        display: none; }
+      .cards .card a #phone {
+        background: #446cdb;
+        height: 40px;
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 8px; }
+        .cards .card a #phone .desktop {
+          display: none; }
+        .cards .card a #phone .mobile {
+          display: inline-block;
+          z-index: 1; }
+        .cards .card a #phone #tel {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+          float: left;
+          top: 0; }
+        .cards .card a #phone #ttc {
+          font-size: .2em;
+          margin-top: 16px; }
+        .cards .card a #phone #tel-num {
+          margin-right: 15px;
+          margin-top: 8px;
+          float: right; }
+      .cards .card footer {
+        z-index: 0; }
+    .cards :nth-child(2) {
+      z-index: -2; }
+    .cards :nth-child(3) {
+      z-index: -3; } }
+
+@media only screen and (max-width: 440px) {
+  .cards .card a #phone #ttc {
+    display: block;
+    padding-top: 3px; }
+  .cards .card a #phone #tel-num {
+    display: block;
+    margin: 0;
+    float: none;
+    font-size: 1.2em; } }
+
+footer section {
+  background: #263F89;
+  color: #fff; }
+  footer section #pp-logo {
+    width: 175px;
+    display: block;
+    margin: 0 auto; }
+  footer section #connect-box {
+    text-align: center; }
+    footer section #connect-box .social {
+      height: 25px; }
+
+footer p {
+  background: #446cdb;
+  color: #fff;
+  text-align: center;
+  font-size: .7em; }
 
 * {
   margin: 0;

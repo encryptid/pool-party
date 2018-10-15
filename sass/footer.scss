@@ -1,0 +1,25 @@
+footer {
+    section {
+        background: $primary;
+        color: #fff;
+
+        #pp-logo {
+            width: 175px;
+            display: block;
+            margin: 0 auto;
+        }
+        #connect-box {
+            // margin: 0 auto;
+            text-align: center;
+            .social {
+                height: 25px;
+            }
+        }
+    }
+    p {
+        background: $accent;
+        color: #fff;
+        text-align: center;
+        font-size: .7em;
+    }
+}
