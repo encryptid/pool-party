@@ -339,7 +339,7 @@ module.exports = {
         }
     }]
 };
-},{}],"pool-party.js":[function(require,module,exports) {
+},{}],"script.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -347,6 +347,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+require('./sass/style.scss');
 
 var _dealers = require('./assets/data/dealers.json');
 
@@ -356,18 +358,34 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+//Importing JSON (vs fetching) for performance
+
+
+//Next, I'll need 3 functions:
+//Function 1: enables UI interactivity (click actions, event listeners, etc.)
+//Function 2: performs filtering
+//Function 3: for rendering. It will accept the filtered data as a parameter
+
 var PoolParty = function () {
     function PoolParty() {
         _classCallCheck(this, PoolParty);
 
+        this.poolPartyPlanning();
         this.poolFilter();
     }
 
-    //Function 1: enables UI interactivity (click actions, event listeners, etc.)
-    //Function 2: performs filtering
-    //Function 3: for rendering. It will accept the filtered data as a parameter
-
     _createClass(PoolParty, [{
+        key: 'poolPartyPlanning',
+        value: function poolPartyPlanning() {
+            var checks = document.querySelectorAll('.check input');
+            var terms = [];
+            console.log(checks);
+            checks.forEach(function (box) {
+                terms.push(box.value);
+            });
+            console.log(terms);
+        }
+    }, {
         key: 'poolFilter',
         value: function poolFilter() {
             console.log(poolDealers);
@@ -377,24 +395,17 @@ var PoolParty = function () {
     return PoolParty;
 }();
 
+// import PoolParty from './pool-party';
+
 exports.default = PoolParty;
-},{"./assets/data/dealers.json":"assets/data/dealers.json"}],"script.js":[function(require,module,exports) {
-'use strict';
+var poolParty = new PoolParty();
 
-require('./sass/style.scss');
-
-var _poolParty = require('./pool-party');
-
-var _poolParty2 = _interopRequireDefault(_poolParty);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var poolParty = new _poolParty2.default();
+console.log(poolParty);
 
 // const init = () => console.log('pool partay!');
 
 // window.addEventListener('load', init());
-},{"./sass/style.scss":"sass/style.scss","./pool-party":"pool-party.js"}],"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./sass/style.scss":"sass/style.scss","./assets/data/dealers.json":"assets/data/dealers.json"}],"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -423,7 +434,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58569' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59045' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
