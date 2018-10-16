@@ -1,0 +1,109 @@
+footer {
+    height: 13vh;
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: $primary;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+
+        #pp-logo {
+            width: 165px;
+            display: block;
+            margin: 0 auto;
+        }
+        #connect-box {
+            // width: 100%;
+            text-align: center;
+            font-size: .7em;
+            margin-top: 12px;
+
+            span {
+                margin-right: 35px;
+            }
+            
+            #icon-wrapper {
+                display: inline-block;
+                .social {
+                    height: 13px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    
+    .wrapper {
+        height: 40px;
+        background: $accent;
+
+        .mobile {
+            display: none;
+        }
+    
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: .7em;
+            padding-top: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    footer {
+        .wrapper {
+            height: 10vh;
+
+            .mobile {
+                display: block;
+            }
+
+            ul {
+                text-align: center;
+                color: #fff;
+                font-size: .7em;
+    
+                li {
+                    display: inline-block;
+                    list-style: none;
+                    margin: 0 2vw;
+                    padding-top: 1vh;
+                    position: relative;
+    
+                    span {
+                        margin-right: 2vw;
+                    }
+                    img {
+                        width: 13px;
+                        position: absolute;
+                        right: -1.8vw;
+                        bottom: 2px;
+                        align-self: center;
+                        }
+                }
+            }
+            hr {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    footer {
+        .wrapper {
+            ul{
+                li{
+                    img {
+                        right: -12px;
+                    }
+                }
+            }
+        }
+    }
+}

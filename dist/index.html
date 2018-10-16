@@ -26,104 +26,176 @@
                 <li>Resources</li>
                 <li>Services</li>
             </ul>
-            <button><!--<img src="assets/images/location-icon.png" alt="small location pin">-->Find a <span>Pool</span> Pro</button>
+            <button>
+                <!--<img src="assets/images/location-icon.png" alt="small location pin">-->Find a <span>Pool</span> Pro</button>
             <img id="menu" src="/menu-icon-mobile.2a354cdc.png" alt="mobile menu icon">
         </nav>
     </header>
     <main>
-    <!-- <img id='banner' src='assets/images/water-image.png' alt='water surface banner'> -->
-    <section id="select">
-        <span>7 dealers in 28226</span>
-        <fieldset>
-            <legend>Filter results</legend>
-            <div>
-                <input type="checkbox" id="service" name="option" value="service" checked="">
-                <label for="service">Service</label>
+        <!-- Checkbox section -->
+        <div class="wrapper">
+            <div class="wrapper-wrapper">
+                <section id="select">
+                    <span id="count">7 dealers in 28226</span>
+                    <fieldset>
+                        <div id="legend-wrap">
+                            <span id="legend">Filter Results</span>
+                            <span id="drop">&#x25BC;</span>
+                        </div>
+                        <div class="check" id="first-box">
+                            <input type="checkbox" id="service" name="option" value="service" checked="">
+                            <label for="service">Service</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="install" name="option" value="install" checked="">
+                            <label for="install">Installation</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="res" name="option" value="res" checked="">
+                            <label for="res">Residential</label>
+                        </div>
+                        <div class="check" id="last-box">
+                            <input type="checkbox" id="comm" name="option" value="comm" unchecked="">
+                            <label for="comm">Commercial</label>
+                        </div>
+                        <span id="help">?</span>
+                    </fieldset>
+                </section>
             </div>
-            <div>
-                <input type="checkbox" id="install" name="option" value="install" checked="">
-                <label for="install">Installation</label>
-            </div>
-            <div>
-                <input type="checkbox" id="res" name="option" value="res" checked="">
-                <label for="res">Residential</label>
-            </div>
-            <div>
-                <input type="checkbox" id="comm" name="option" value="comm" unchecked="">
-                <label for="comm">Commercial</label>
-            </div>
-            <span>7</span>
-        </fieldset>
-    </section>
-        <section class="card">
-            <h3>Title1</h3>
-            <hr>
-            <img src="/phone-icon-desktop.def3d16e.png">
-            <span>1.888.888.8888</span>
-            <p>Can't talk now? Click below to send an email.</p>
-            <button><img src="/email-icon.456ea340.png">Contact this Pro</button>
-            <div id="hours">
-                <h4>Business Hours</h4>
-                <p>Weekdays 7:00am - 7:00pm</p>
-                <p>Saturdays 7:00am - 3:00pm</p>
-                <p>Sundays - CLOSED</p>
-            </div>
-            <footer>
-                <span><img src="/star-installation-pro.4ab1d4e1.png">Installation Pro</span>
-                <span><img src="/gear-service-pro.3ac31e66.png">Service Pro</span>
-                <span><img src="/home-residential-pro.f91ea0d0.png">Residential Pro</span>
-            </footer>
-        </section>
-        <section class="card">
-            <h3>Title2</h3>
-            <hr>
-            <img src="/phone-icon-desktop.def3d16e.png">
-            <span>1.888.888.8888</span>
-            <p>Can't talk now? Click below to send an email.</p>
-            <button><img src="/email-icon.456ea340.png">Contact this Pro</button>
-            <div id="hours">
-                <h4>Business Hours</h4>
-                <p>Weekdays 7:00am - 7:00pm</p>
-                <p>Saturdays 7:00am - 3:00pm</p>
-                <p>Sundays - On Call</p>
-            </div>
-            <footer>
-                <span><img src="/star-installation-pro.4ab1d4e1.png">Installation Pro</span>
-                <span><img src="/gear-service-pro.3ac31e66.png">Service Pro</span>
-                <span><img src="/home-residential-pro.f91ea0d0.png">Residential Pro</span>
-                <span><img src="/users-commercial-pro.13e96904.png">Commercial Pro</span>
-            </footer>
-        </section>
-        <section class="card">
-            <h3>Title3</h3>
-            <hr>
-            <img src="/phone-icon-desktop.def3d16e.png">
-            <span>1.888.888.8888</span>
-            <p>Can't talk now? Click below to send an email.</p>
-            <button><img src="/email-icon.456ea340.png">Contact this Pro</button>
-            <div id="hours">
-                <h4>Business Hours</h4>
-                <p>Weekdays 7:00am - 7:00pm</p>
-                <p>Saturdays 7:00am - 3:00pm</p>
-                <p>Sundays - 7:00am - 3:00pm</p>
-            </div>
-            <footer>
-                <span><img src="/star-installation-pro.4ab1d4e1.png">Installation Pro</span>
-                <span><img src="/gear-service-pro.3ac31e66.png">Service Pro</span>
-                <span><img src="/home-residential-pro.f91ea0d0.png">Residential Pro</span>
-                <span><img src="/users-commercial-pro.13e96904.png">Commercial Pro</span>
-            </footer>
-        </section>
+        </div>
+        <!-- Card display section -->
+        <div class="cards">
+            <section class="card">
+                <div id="card-header">
+                    <h3>Title1</h3>
+                </div>
+                <hr>
+                <a href="tel:18888888888">
+                    <div id="phone">
+                        <img class="desktop" src="/phone-icon-desktop.def3d16e.png">
+                        <img class="mobile" id="tel" src="/phone-icon-mobile.56447521.png">
+                        <span class="mobile" id="ttc">Tap to call</span>
+                        <span id="tel-num">1.888.888.8888</span>
+                    </div>
+                </a>
+                <p>Can't talk now? Click below to send an email.</p>
+                <button><img src="/email-icon.456ea340.png"><span>Contact this Pro</span></button>
+                <div id="hours">
+                    <h4>Business Hours</h4>
+                    <p>Weekdays 7:00am - 7:00pm</p>
+                    <p>Saturdays 7:00am - 3:00pm</p>
+                    <p>Sundays - CLOSED</p>
+                </div>
+                <footer>
+                    <div class="icon">
+                        <img src="/star-installation-pro.4ab1d4e1.png">
+                        <span>Installation Pro</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/gear-service-pro.3ac31e66.png">
+                        <span>Service Pro</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/home-residential-pro.f91ea0d0.png">
+                        <span>Residential Pro</span>
+                    </div>
+                </footer>
+            </section>
+            <section class="card">
+                <div id="card-header">
+                    <h3>Title2</h3>
+                </div>
+                <hr>
+                <a href="tel:18888888888">
+                    <div id="phone">
+                        <img class="desktop" src="/phone-icon-desktop.def3d16e.png">
+                        <img class="mobile" id="tel" src="/phone-icon-mobile.56447521.png">
+                        <span class="mobile" id="ttc">Tap to call</span>
+                        <span id="tel-num">1.888.888.8888</span>
+                    </div>
+                </a>
+                <p>Can't talk now? Click below to send an email.</p>
+                <button><img src="/email-icon.456ea340.png"><span>Contact this Pro</span></button>
+                <div id="hours">
+                    <h4>Business Hours</h4>
+                    <p>Weekdays 7:00am - 7:00pm</p>
+                    <p>Saturdays 7:00am - 3:00pm</p>
+                    <p>Sundays - On Call</p>
+                </div>
+                <footer>
+                    <div class="icon">
+                        <img src="/star-installation-pro.4ab1d4e1.png">
+                        <span>Installation Pro</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/gear-service-pro.3ac31e66.png">
+                        <span>Service Pro</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/home-residential-pro.f91ea0d0.png">
+                        <span>Residential Pro</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/users-commercial-pro.13e96904.png">
+                        <span>Commercial Pro</span>
+                    </div>
+                </footer>
+            </section>
+            <section class="card">
+                <div id="card-header">
+                    <h3>Title3</h3>
+                </div>
+                <hr>
+                <a href="tel:1.888.888.8888">
+                    <div id="phone">
+                        <img class="desktop" src="/phone-icon-desktop.def3d16e.png">
+                        <img class="mobile" id="tel" src="/phone-icon-mobile.56447521.png">
+                        <span class="mobile" id="ttc">Tap to call</span>
+                        <span id="tel-num">1.888.888.8888</span>
+                    </div>
+                </a>
+                <p>Can't talk now? Click below to send an email.</p>
+                <button><img src="/email-icon.456ea340.png"><span>Contact this Pro</span></button>
+                <div id="hours">
+                    <h4>Business Hours</h4>
+                    <p>Weekdays 7:00am - 7:00pm</p>
+                    <p>Saturdays 7:00am - 3:00pm</p>
+                    <p>Sundays - 7:00am - 3:00pm</p>
+                </div>
+                <footer>
+                    <div class="icon">
+                        <img src="/star-installation-pro.4ab1d4e1.png">
+                        <span>Installation Pro</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/gear-service-pro.3ac31e66.png"><span>Service Pro</span></div>
+                    <div class="icon">
+                        <img src="/home-residential-pro.f91ea0d0.png"><span>Residential Pro</span></div>
+                    <div class="icon"><img src="/users-commercial-pro.13e96904.png"><span>Commercial Pro</span></div>
+                </footer>
+            </section>
+        </div>
     </main>
     <footer>
         <section>
-        <img src="/pool-pros-logo-footer.7566bbc6.png">
-        <span>CONNECT WITH US</span>
-        <img src="/twitter-icon.e7f12f5e.png">
-        <img src="/facebook-icon.153f27c9.png">
-        <img src="/youtube-icon.663ce224.png">
+            <img id="pp-logo" src="/pool-pros-logo-footer.7566bbc6.png">
+            <div id="connect-box">
+                <span>CONNECT WITH US</span>
+                <div id="icon-wrapper">
+                    <img class="social" src="/twitter-icon.e7f12f5e.png">
+                    <img class="social" src="/facebook-icon.153f27c9.png">
+                    <img class="social" src="/youtube-icon.663ce224.png">
+                </div>
+            </div>
         </section>
-        <p>&copy;2018 Pool Pros  |  Privacy Policy  |  Terms and Conditions</p>
+        <div class="wrapper">
+            <ul class="mobile">
+                <li>Dealers and Distributors</li><span> | </span>
+                <li><span>Commercial Service</span><img src="/action-commercial-icon.b7b25bdd.png"></li>
+            </ul>
+            <hr class="mobile">
+            <p>&copy;2018 Pool Pros &nbsp;| &nbsp; Privacy Policy &nbsp; | &nbsp; Terms and Conditions</p>
+        </div>
     </footer>
 </body>
 

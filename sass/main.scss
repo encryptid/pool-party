@@ -3,7 +3,192 @@ main {
     background-position: 0 -3vh;
     background-repeat: no-repeat;
 
-    section {
-        padding-top: 15vh;
+    .wrapper {
+        padding-top: 16vh;
+
+        .wrapper-wrapper {
+
+        #select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $select;
+            height: 10vh;
+            max-width: 80vw;
+            margin: 0 auto;
+            border-radius: 8px;
+
+            // .wrapper {
+            //     padding-top: 0;
+            //     text-align: center;
+
+                #count {
+                    // display: inline-block;
+                    color: $accent;
+                    font-weight: 600;
+                    font-size: .9em;
+                    border-right: 2px solid $border;
+                    max-height: 70%;
+                    min-width: 160px;
+                    // padding: 0 0;
+                    line-height: 3.5em;
+                }
+
+                fieldset {
+                    border: none;
+                    font-size: .55em;
+                    margin-left: 2vw;
+                    display: inline-block;
+
+                    #legend-wrap {
+                        #legend {
+                            font-size: 1.5em;
+                            letter-spacing: .5px;
+                            font-weight: 700;
+                            margin-right: 3vw;
+                        }
+
+                        #drop {
+                            display: none;
+                        }
+                    }
+
+                    div {
+                        color: #4d4d4d;
+                        display: inline-block;
+
+                        input {
+                            margin: 0 .5vw;
+                            // -webkit-appearance: none;
+                            // visibility: hidden;
+                            // background: purple;
+                            // border: 2px solid green;
+                            // height: 2vh;
+                            // width: 2vh;
+                        }
+                        label {
+                            margin-right: 2vw;
+                        }
+                    }
+                    #help {
+                        color: $accent;
+                        font-weight: 600;
+                        padding: 5px;
+                        background: $border;
+                        border-radius: 2px;
+                        line-height: .55em;
+                    }
+                    #help:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 740px) {
+    main {
+        .wrapper {
+            padding-top: 17vh;
+            margin-bottom: 5vh;
+            .wrapper-wrapper {
+                padding-bottom: 25px;
+                background: $select;
+                border-bottom: 1px solid $border;
+
+                #select {
+                display: block;
+                position: relative;
+                min-width: 100%;
+                min-height: 50vh;
+                z-index: 100;
+                
+                #count {
+                    display: block;
+                    border-right: none;
+                    min-width: 45%;
+                    max-height: 8vh;
+                    font-size: 1em;
+                    letter-spacing: .7px;
+                    padding-top: 2vh;
+                    }
+
+                    fieldset {
+                        max-width: 95%;
+                        background: #fff;
+                        display: block;
+                        margin: 0 auto;
+                        position: relative;
+                        border: 1px solid $border;
+                        z-index: initial;
+                        
+                        #legend-wrap {
+                            position: absolute;
+                            top: -53px;
+                            right: -1px;
+                            z-index: -1;
+
+                            #legend {
+                                display: inline-block;
+                                font-size: 1.7em;
+                                font-weight: 600;
+                                background: #fff;
+                                border: 1px solid $border;
+                                width: 150px;
+                                height: 46px;
+                                text-align: center;
+                                padding-top: 15px;
+                                margin-right: -4px;
+                            }
+
+                            #drop {
+                                display: inline-block;
+                                background: $select;
+                                border: 1px solid $border;
+                                width: 45px;
+                                height: 46px;
+                                text-align: center;
+                                padding-top: 19px;
+                                position: relative;
+                                top: -2px;
+                            }
+                        }
+                        .check {
+                            display: block;
+                            font-size: 2em;
+                            margin: 7vh 5vw;
+                            position: relative;
+                            z-index: 1000;
+
+                            input {
+                                margin-left: 4vw;
+                            }
+
+                            label {
+                                margin-left: 3vw;
+                            }
+                        }
+
+                        #first-box {
+                            margin-top: 3vh;
+                        }
+                        #last-box {
+                            margin-bottom: 4vh;
+                        }
+
+                        #help {
+                            position: absolute;
+                            bottom: 3.8vh;
+                            right: 40vw;
+                            text-align: center;
+                            padding: 8px 8px;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

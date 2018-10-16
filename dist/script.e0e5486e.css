@@ -153,7 +153,8 @@ header {
       font-weight: 700;
       font-size: .8em;
       letter-spacing: .8px;
-      padding-left: 8px; }
+      padding: 7px 0;
+      padding-left: 15px; }
     header nav #menu {
       display: none; }
 
@@ -189,15 +190,364 @@ main {
   background-image: url("water-image.ded7917b.png");
   background-position: 0 -3vh;
   background-repeat: no-repeat; }
-  main section {
-    padding-top: 15vh; }
+  main .wrapper {
+    padding-top: 16vh; }
+    main .wrapper .wrapper-wrapper #select {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f6f6f6;
+      height: 10vh;
+      max-width: 80vw;
+      margin: 0 auto;
+      border-radius: 8px; }
+      main .wrapper .wrapper-wrapper #select #count {
+        color: #446cdb;
+        font-weight: 600;
+        font-size: .9em;
+        border-right: 2px solid #d7d7d7;
+        max-height: 70%;
+        min-width: 160px;
+        line-height: 3.5em; }
+      main .wrapper .wrapper-wrapper #select fieldset {
+        border: none;
+        font-size: .55em;
+        margin-left: 2vw;
+        display: inline-block; }
+        main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #legend {
+          font-size: 1.5em;
+          letter-spacing: .5px;
+          font-weight: 700;
+          margin-right: 3vw; }
+        main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #drop {
+          display: none; }
+        main .wrapper .wrapper-wrapper #select fieldset div {
+          color: #4d4d4d;
+          display: inline-block; }
+          main .wrapper .wrapper-wrapper #select fieldset div input {
+            margin: 0 .5vw; }
+          main .wrapper .wrapper-wrapper #select fieldset div label {
+            margin-right: 2vw; }
+        main .wrapper .wrapper-wrapper #select fieldset #help {
+          color: #446cdb;
+          font-weight: 600;
+          padding: 5px;
+          background: #d7d7d7;
+          border-radius: 2px;
+          line-height: .55em; }
+        main .wrapper .wrapper-wrapper #select fieldset #help:hover {
+          cursor: pointer; }
 
-#select {
-  max-width: 100%; }
+@media only screen and (max-width: 740px) {
+  main .wrapper {
+    padding-top: 17vh;
+    margin-bottom: 5vh; }
+    main .wrapper .wrapper-wrapper {
+      padding-bottom: 25px;
+      background: #f6f6f6;
+      border-bottom: 1px solid #d7d7d7; }
+      main .wrapper .wrapper-wrapper #select {
+        display: block;
+        position: relative;
+        min-width: 100%;
+        min-height: 50vh;
+        z-index: 100; }
+        main .wrapper .wrapper-wrapper #select #count {
+          display: block;
+          border-right: none;
+          min-width: 45%;
+          max-height: 8vh;
+          font-size: 1em;
+          letter-spacing: .7px;
+          padding-top: 2vh; }
+        main .wrapper .wrapper-wrapper #select fieldset {
+          max-width: 95%;
+          background: #fff;
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          border: 1px solid #d7d7d7;
+          z-index: initial; }
+          main .wrapper .wrapper-wrapper #select fieldset #legend-wrap {
+            position: absolute;
+            top: -53px;
+            right: -1px;
+            z-index: -1; }
+            main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #legend {
+              display: inline-block;
+              font-size: 1.7em;
+              font-weight: 600;
+              background: #fff;
+              border: 1px solid #d7d7d7;
+              width: 150px;
+              height: 46px;
+              text-align: center;
+              padding-top: 15px;
+              margin-right: -4px; }
+            main .wrapper .wrapper-wrapper #select fieldset #legend-wrap #drop {
+              display: inline-block;
+              background: #f6f6f6;
+              border: 1px solid #d7d7d7;
+              width: 45px;
+              height: 46px;
+              text-align: center;
+              padding-top: 19px;
+              position: relative;
+              top: -2px; }
+          main .wrapper .wrapper-wrapper #select fieldset .check {
+            display: block;
+            font-size: 2em;
+            margin: 7vh 5vw;
+            position: relative;
+            z-index: 1000; }
+            main .wrapper .wrapper-wrapper #select fieldset .check input {
+              margin-left: 4vw; }
+            main .wrapper .wrapper-wrapper #select fieldset .check label {
+              margin-left: 3vw; }
+          main .wrapper .wrapper-wrapper #select fieldset #first-box {
+            margin-top: 3vh; }
+          main .wrapper .wrapper-wrapper #select fieldset #last-box {
+            margin-bottom: 4vh; }
+          main .wrapper .wrapper-wrapper #select fieldset #help {
+            position: absolute;
+            bottom: 3.8vh;
+            right: 40vw;
+            text-align: center;
+            padding: 8px 8px;
+            border-radius: 3px; } }
+
+.cards {
+  display: flex;
+  max-width: 80vw;
+  margin: 0 auto; }
+  .cards .card {
+    width: 30%;
+    margin: 3vh .6vw;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: -2px 2px 2px 0px #e9e9e9, 2px 0px 0px 0px #e9e9e9;
+    overflow: hidden; }
+    .cards .card #card-header {
+      position: relative;
+      height: 80px; }
+      .cards .card #card-header h3 {
+        font-weight: lighter;
+        text-align: center;
+        color: #6a6a6a;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .cards .card hr {
+      background: #e9e9e9;
+      border: none;
+      border-radius: 5px;
+      height: 2px; }
+    .cards .card a {
+      text-decoration: none;
+      color: black; }
+      .cards .card a #phone {
+        text-align: center;
+        margin-top: 10px;
+        position: relative; }
+        .cards .card a #phone .mobile {
+          display: none; }
+        .cards .card a #phone img {
+          height: 23px;
+          padding-top: 10px;
+          position: relative;
+          top: 5px;
+          margin: 0 10px; }
+        .cards .card a #phone span {
+          font-weight: 700;
+          font-size: 1.3em;
+          letter-spacing: .5px; }
+    .cards .card p {
+      font-style: italic;
+      font-size: .6em;
+      text-align: center;
+      margin: 11px 0 20px 0; }
+    .cards .card button {
+      display: block;
+      border: 1px solid #70c7c6;
+      border-radius: 3px;
+      margin: 0 auto 40px auto;
+      padding: 10px; }
+      .cards .card button img {
+        float: left;
+        width: 16px;
+        margin-right: 10px;
+        margin-top: 2px; }
+      .cards .card button span {
+        float: right;
+        color: #263F89;
+        font-weight: 600;
+        font-size: 1.3em;
+        letter-spacing: .5px; }
+    .cards .card #hours {
+      text-align: center; }
+      .cards .card #hours h4 {
+        font-size: .7em; }
+      .cards .card #hours p {
+        font-style: normal;
+        margin: 5px;
+        color: #6a6a6a; }
+    .cards .card footer {
+      background: #f6f6f6;
+      position: relative;
+      padding-bottom: 25px;
+      bottom: -30px;
+      left: -18px;
+      width: 115%;
+      height: 80px;
+      font-size: .5em;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center; }
+      .cards .card footer .icon {
+        display: inline-block;
+        min-width: 45%;
+        text-align: center;
+        margin-left: 10px;
+        padding-top: 10px;
+        position: relative; }
+        .cards .card footer .icon img {
+          position: relative;
+          top: 1px;
+          width: 9px;
+          margin-right: 5px; }
+        .cards .card footer .icon span {
+          color: #6a6a6a; }
+
+@media only screen and (max-width: 740px) {
+  .cards {
+    flex-direction: column;
+    min-width: 90%;
+    align-items: center; }
+    .cards .card {
+      min-width: 90%;
+      margin-top: -45px;
+      position: relative;
+      border-radius: 0;
+      z-index: -1; }
+      .cards .card hr {
+        display: none; }
+      .cards .card a #phone {
+        background: #446cdb;
+        height: 40px;
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 8px; }
+        .cards .card a #phone .desktop {
+          display: none; }
+        .cards .card a #phone .mobile {
+          display: inline-block;
+          z-index: 1; }
+        .cards .card a #phone #tel {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+          float: left;
+          top: 0; }
+        .cards .card a #phone #ttc {
+          font-size: .2em;
+          margin-top: 16px; }
+        .cards .card a #phone #tel-num {
+          margin-right: 15px;
+          margin-top: 8px;
+          float: right; }
+      .cards .card footer {
+        z-index: 0; }
+    .cards :nth-child(2) {
+      z-index: -2; }
+    .cards :nth-child(3) {
+      z-index: -3; } }
+
+@media only screen and (max-width: 440px) {
+  .cards .card a #phone #ttc {
+    display: block;
+    padding-top: 3px; }
+  .cards .card a #phone #tel-num {
+    display: block;
+    margin: 0;
+    float: none;
+    font-size: 1.2em; } }
+
+footer {
+  height: 13vh; }
+  footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #263F89;
+    color: #fff;
+    height: 100%;
+    width: 100%; }
+    footer section #pp-logo {
+      width: 165px;
+      display: block;
+      margin: 0 auto; }
+    footer section #connect-box {
+      text-align: center;
+      font-size: .7em;
+      margin-top: 12px; }
+      footer section #connect-box span {
+        margin-right: 35px; }
+      footer section #connect-box #icon-wrapper {
+        display: inline-block; }
+        footer section #connect-box #icon-wrapper .social {
+          height: 13px;
+          margin: 0 5px; }
+  footer .wrapper {
+    height: 40px;
+    background: #446cdb; }
+    footer .wrapper .mobile {
+      display: none; }
+    footer .wrapper p {
+      color: #fff;
+      text-align: center;
+      font-size: .7em;
+      padding-top: 10px; }
+
+@media only screen and (max-width: 740px) {
+  footer .wrapper {
+    height: 10vh; }
+    footer .wrapper .mobile {
+      display: block; }
+    footer .wrapper ul {
+      text-align: center;
+      color: #fff;
+      font-size: .7em; }
+      footer .wrapper ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 2vw;
+        padding-top: 1vh;
+        position: relative; }
+        footer .wrapper ul li span {
+          margin-right: 2vw; }
+        footer .wrapper ul li img {
+          width: 13px;
+          position: absolute;
+          right: -1.8vw;
+          bottom: 2px;
+          align-self: center; }
+    footer .wrapper hr {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10px; } }
+
+@media only screen and (max-width: 440px) {
+  footer .wrapper ul li img {
+    right: -12px; } }
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; }
 
 li {
   list-style: none; }
