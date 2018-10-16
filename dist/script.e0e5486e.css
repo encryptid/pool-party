@@ -475,23 +475,74 @@ main {
     float: none;
     font-size: 1.2em; } }
 
-footer section {
-  background: #263F89;
-  color: #fff; }
-  footer section #pp-logo {
-    width: 175px;
-    display: block;
-    margin: 0 auto; }
-  footer section #connect-box {
-    text-align: center; }
-    footer section #connect-box .social {
-      height: 25px; }
+footer {
+  height: 13vh; }
+  footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #263F89;
+    color: #fff;
+    height: 100%;
+    width: 100%; }
+    footer section #pp-logo {
+      width: 165px;
+      display: block;
+      margin: 0 auto; }
+    footer section #connect-box {
+      text-align: center;
+      font-size: .7em;
+      margin-top: 12px; }
+      footer section #connect-box span {
+        margin-right: 35px; }
+      footer section #connect-box #icon-wrapper {
+        display: inline-block; }
+        footer section #connect-box #icon-wrapper .social {
+          height: 13px;
+          margin: 0 5px; }
+  footer .wrapper {
+    height: 40px;
+    background: #446cdb; }
+    footer .wrapper .mobile {
+      display: none; }
+    footer .wrapper p {
+      color: #fff;
+      text-align: center;
+      font-size: .7em;
+      padding-top: 10px; }
 
-footer p {
-  background: #446cdb;
-  color: #fff;
-  text-align: center;
-  font-size: .7em; }
+@media only screen and (max-width: 740px) {
+  footer .wrapper {
+    height: 10vh; }
+    footer .wrapper .mobile {
+      display: block; }
+    footer .wrapper ul {
+      text-align: center;
+      color: #fff;
+      font-size: .7em; }
+      footer .wrapper ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 2vw;
+        padding-top: 1vh;
+        position: relative; }
+        footer .wrapper ul li span {
+          margin-right: 2vw; }
+        footer .wrapper ul li img {
+          width: 13px;
+          position: absolute;
+          right: -1.8vw;
+          bottom: 2px;
+          align-self: center; }
+    footer .wrapper hr {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10px; } }
+
+@media only screen and (max-width: 440px) {
+  footer .wrapper ul li img {
+    right: -12px; } }
 
 * {
   margin: 0;
