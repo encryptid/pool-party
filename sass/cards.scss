@@ -18,7 +18,7 @@
         // position: relative;
         overflow: hidden;
 
-        #card-header {
+        .card-header {
             position: relative;
             height: 80px;
             h3 {
@@ -42,7 +42,7 @@
         a {
             text-decoration: none;
             color: black;
-            #phone {
+            .phone {
                 text-align: center;
                 margin-top: 10px;
                 position: relative;
@@ -169,7 +169,7 @@
             }
 
             a {
-                #phone {
+                .phone {
                     background: $accent;
                     height: 40px;
                     color: white;
@@ -184,7 +184,7 @@
                         display: inline-block;
                         z-index: 1;
                     }
-                    #tel {
+                    .tel {
                         // position: relative;
                         width: 30px;
                         height: 30px;
@@ -193,11 +193,11 @@
                         top: 0;   
                     }
 
-                    #ttc {
+                    .ttc {
                         font-size: .2em;
                         margin-top: 16px;
                     }
-                    #tel-num {
+                    .tel-num {
                         margin-right: 15px;
                         margin-top: 8px;
                         float: right;
@@ -222,12 +222,12 @@
     .cards {
         .card {
             a {
-                #phone {
-                    #ttc {
+                .phone {
+                    .ttc {
                         display: block;
                         padding-top: 3px;
                     }
-                    #tel-num {
+                    .tel-num {
                         display: block;
                         margin: 0;
                         float: none;

@@ -367,28 +367,54 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 //Function 3: for rendering. It will accept the filtered data as a parameter
 
 var PoolParty = function () {
-    function PoolParty() {
+    function PoolParty(i) {
         _classCallCheck(this, PoolParty);
 
+        this.items = i;
         this.poolPartyPlanning();
         this.poolFilter();
+        // this.terms = [];
     }
 
     _createClass(PoolParty, [{
         key: 'poolPartyPlanning',
         value: function poolPartyPlanning() {
-            var checks = document.querySelectorAll('.check input');
-            var terms = [];
-            console.log(checks);
-            checks.forEach(function (box) {
-                terms.push(box.value);
+            var _this = this;
+
+            console.log(this.items);
+            this.terms = [];
+            //return all checkboxes
+            this.checkboxes = document.querySelectorAll('.check input');
+            console.log(this.checkboxes);
+            //add event listener to each checkbox to see if they change
+            this.checkboxes.forEach(function (box) {
+                return box.addEventListener('change', function (box) {
+                    //when they change, what happens? should we push to our array?
+                    console.log('box changed!');
+                    if (box.checked == true) {
+                        _this.terms.push(box.id);
+                    }
+                });
             });
-            console.log(terms);
+            console.log(this.terms);
+            // this.cards = document.querySelectorAll('.card');
+            // console.log(this.cards);
         }
     }, {
         key: 'poolFilter',
         value: function poolFilter() {
-            console.log(poolDealers);
+            //1. check which boxes are checked and return only the services which are 'true'
+            //2. filter those results down to 3 (create an array, and push/pop the array)
+            // this.checks.forEach((box) => {
+            //     if (box.checked == true) {
+            //     this.terms.push(box);
+            //     }
+            //     else {
+            //         console.log(`${box.id} is not checked`);
+            //     }  
+            // })
+            // console.log(this.terms);
+            // console.log(poolDealers);
         }
     }]);
 
@@ -397,8 +423,11 @@ var PoolParty = function () {
 
 // import PoolParty from './pool-party';
 
+
 exports.default = PoolParty;
-var poolParty = new PoolParty();
+var items = 'figs';
+
+var poolParty = new PoolParty(items);
 
 console.log(poolParty);
 
@@ -434,7 +463,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59045' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64435' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

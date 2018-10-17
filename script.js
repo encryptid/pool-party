@@ -10,29 +10,53 @@ import * as poolDealers from './assets/data/dealers.json';
 
 export default class PoolParty {
 
-    constructor() {
+    constructor(i) {
+        this.items = i;
         this.poolPartyPlanning();
         this.poolFilter();
+        // this.terms = [];
     }
 
     poolPartyPlanning() {
-        const checks = document.querySelectorAll('.check input');
-        let terms = [];
-        console.log(checks);
-        checks.forEach((box) => {
-            terms.push(box.value);
-        })
-        console.log(terms);
+        console.log(this.items);
+        this.terms = [];
+        //return all checkboxes
+        this.checkboxes = document.querySelectorAll('.check input');
+        console.log(this.checkboxes);
+        //add event listener to each checkbox to see if they change
+        this.checkboxes.forEach((box) => box.addEventListener('change', (box) => {
+            //when they change, what happens? should we push to our array?
+            console.log('box changed!');
+            if (box.checked == true) {
+                this.terms.push(box.id);
+            }
+        }))
+        console.log(this.terms);
+        // this.cards = document.querySelectorAll('.card');
+        // console.log(this.cards);
+        
     }
 
     poolFilter() {
-        console.log(poolDealers);
+        //1. check which boxes are checked and return only the services which are 'true'
+        //2. filter those results down to 3 (create an array, and push/pop the array)
+        // this.checks.forEach((box) => {
+        //     if (box.checked == true) {
+        //     this.terms.push(box);
+        //     }
+        //     else {
+        //         console.log(`${box.id} is not checked`);
+        //     }  
+        // })
+        // console.log(this.terms);
+        // console.log(poolDealers);
     }
 }
 
 // import PoolParty from './pool-party';
+const items = 'figs'
 
-const poolParty = new PoolParty();
+const poolParty = new PoolParty(items);
 
 console.log(poolParty);
 
