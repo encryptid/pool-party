@@ -371,40 +371,77 @@ var PoolParty = function () {
         _classCallCheck(this, PoolParty);
 
         this.items = i;
+        this.services = [];
+        this.checkboxes = null;
         this.poolPartyPlanning();
         this.poolFilter();
-        // this.terms = [];
     }
 
     _createClass(PoolParty, [{
         key: 'poolPartyPlanning',
-        value: function poolPartyPlanning() {
+        value: function poolPartyPlanning(method) {
             var _this = this;
 
-            console.log(this.items);
-            this.terms = [];
-            //return all checkboxes
-            this.checkboxes = document.querySelectorAll('.check input');
-            console.log(this.checkboxes);
-            //add event listener to each checkbox to see if they change
-            this.checkboxes.forEach(function (box) {
-                return box.addEventListener('change', function (box) {
-                    //when they change, what happens? should we push to our array?
-                    console.log('box changed!');
+            console.log(method);
+            var services = this.services;
+            //return all checked boxes on window load
+            window.addEventListener('load', function () {
+                _this.checkboxes = document.querySelectorAll('.check input');
+                _this.checkboxes.forEach(function (box) {
                     if (box.checked == true) {
-                        _this.terms.push(box.id);
+                        services.push(box.id);
                     }
                 });
+                //return all checked boxes on change
+                _this.checkboxes.forEach(function (brx) {
+                    brx.addEventListener('change', function (event) {
+                        //if checked and not already in services...
+                        if (brx.checked === true && services.indexOf(event.target.id) == -1) {
+                            //add to services
+                            services.push(event.target.id);
+                        }
+                        //else if un-checked and in services...
+                        else if (brx.checked === false && services.indexOf(event.target.id) >= 0) {
+                                var num = services.indexOf(event.target.id);
+                                //remove from services
+                                services.splice(num, 1);
+                            }
+                            //or else it's a weird one.
+                            else {
+                                    console.log('edge case');
+                                }
+                    });
+                });
             });
-            console.log(this.terms);
             // this.cards = document.querySelectorAll('.card');
             // console.log(this.cards);
+            this.poolFilter();
         }
     }, {
         key: 'poolFilter',
         value: function poolFilter() {
+            var _this2 = this;
+
             //1. check which boxes are checked and return only the services which are 'true'
             //2. filter those results down to 3 (create an array, and push/pop the array)
+            console.log('buns');
+            console.log(this.services);
+            // console.log(poolDealers.dealers);
+            var certz = poolDealers.dealers[0].data.certifications;
+            console.log(certz);
+            this.die = [];
+
+            this.dealers = poolDealers.dealers.forEach(function (d) {
+                // console.log(d.data.certifications);
+                _this2.services.filter(function (srv) {
+                    console.log(d);
+                    _this2.die.push(d);
+                    return d.data.certifications === srv;
+                });
+            });
+
+            console.log(this.die);
+
             // this.checks.forEach((box) => {
             //     if (box.checked == true) {
             //     this.terms.push(box);
@@ -429,7 +466,7 @@ var items = 'figs';
 
 var poolParty = new PoolParty(items);
 
-console.log(poolParty);
+// console.log(poolParty);
 
 // const init = () => console.log('pool partay!');
 
@@ -463,7 +500,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64435' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51128' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
