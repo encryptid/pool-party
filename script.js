@@ -11,7 +11,7 @@ import './sass/style.scss';
 import PoolParty from './assets/scripts/pool-party';
 
 window.addEventListener('load', () => {
-
+    console.log('window loaded');
     // const items = 'figs';
 
     const poolParty = new PoolParty();
