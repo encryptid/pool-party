@@ -339,7 +339,7 @@ module.exports = {
         }
     }]
 };
-},{}],"script.js":[function(require,module,exports) {
+},{}],"assets/scripts/pool-party.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -348,9 +348,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-require('./sass/style.scss');
-
-var _dealers = require('./assets/data/dealers.json');
+var _dealers = require('../data/dealers.json');
 
 var poolDealers = _interopRequireWildcard(_dealers);
 
@@ -358,19 +356,11 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//Importing JSON (vs fetching) for performance
-
-
-//Next, I'll need 3 functions:
-//Function 1: enables UI interactivity (click actions, event listeners, etc.)
-//Function 2: performs filtering
-//Function 3: for rendering. It will accept the filtered data as a parameter
-
 var PoolParty = function () {
     function PoolParty(i) {
         _classCallCheck(this, PoolParty);
 
-        this.items = i;
+        // this.items = i;
         this.services = [];
         this.checkboxes = null;
         this.poolPartyPlanning();
@@ -382,7 +372,6 @@ var PoolParty = function () {
         value: function poolPartyPlanning(method) {
             var _this = this;
 
-            console.log(method);
             var services = this.services;
             //return all checked boxes on window load
             window.addEventListener('load', function () {
@@ -436,11 +425,11 @@ var PoolParty = function () {
                 _this2.services.filter(function (srv) {
                     console.log(d);
                     _this2.die.push(d);
-                    return d.data.certifications === srv;
+                    return d.data.certifications == srv;
                 });
             });
 
-            console.log(this.die);
+            console.log(this.dealers);
 
             // this.checks.forEach((box) => {
             //     if (box.checked == true) {
@@ -458,20 +447,35 @@ var PoolParty = function () {
     return PoolParty;
 }();
 
-// import PoolParty from './pool-party';
-
-
 exports.default = PoolParty;
-var items = 'figs';
+},{"../data/dealers.json":"assets/data/dealers.json"}],"script.js":[function(require,module,exports) {
+'use strict';
 
-var poolParty = new PoolParty(items);
+require('./sass/style.scss');
 
-// console.log(poolParty);
+var _poolParty = require('./assets/scripts/pool-party');
 
-// const init = () => console.log('pool partay!');
+var _poolParty2 = _interopRequireDefault(_poolParty);
 
-// window.addEventListener('load', init());
-},{"./sass/style.scss":"sass/style.scss","./assets/data/dealers.json":"assets/data/dealers.json"}],"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/hmr-runtime.js":[function(require,module,exports) {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.addEventListener('load', function () {
+
+    // const items = 'figs';
+
+    var poolParty = new _poolParty2.default();
+
+    // console.log(poolParty);
+});
+
+//Importing JSON (vs fetching) for performance
+// import * as poolDealers from './assets/data/dealers.json';
+
+//Next, I'll need 3 functions:
+//Function 1: enables UI interactivity (click actions, event listeners, etc.)
+//Function 2: performs filtering
+//Function 3: for rendering. It will accept the filtered data as a parameter
+},{"./sass/style.scss":"sass/style.scss","./assets/scripts/pool-party":"assets/scripts/pool-party.js"}],"../../../.nvm/versions/node/v7.2.0/lib/node_modules/parcel-bundler/lib/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -500,7 +504,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51128' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51988' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
