@@ -5,4 +5,4 @@
 # *assets/
 *images/
 *dist/
-*pool-party.js
+# *pool-party.js

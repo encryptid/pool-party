@@ -417,8 +417,6 @@ var PoolParty = function () {
     }, {
         key: 'poolFilter',
         value: function poolFilter() {
-            var _this = this;
-
             //1. check which boxes are checked and return only the services which are 'true'
             //2. filter those results down to 3 (create an array, and push/pop the array)
             var services = this.services;
@@ -436,11 +434,12 @@ var PoolParty = function () {
             //1. look at each item in 'services'
             //2. look at each item in 'certifications' in each dealer
             //3. return the dealers that contain only the items that services is currently showing
+            var filtered = void 0;
 
             dealers.forEach(function (item) {
-                _this.dealers = item.data.certifications.filter(function (c, i) {
-                    return console.log(c + ' : ' + services[i]);
-                }); //c == services[i]);
+                filtered = item.data.certifications.filter(function (c, i) {
+                    return c === services[i];
+                });
                 // console.log(c);
                 // console.log(services[i]);
                 // if (c === services[i]) this.die.push(item.data);
@@ -452,7 +451,7 @@ var PoolParty = function () {
             //         return d.data.certifications === services[i];
             //     });
             console.log(this.die);
-            console.log(this.dealers);
+            console.log(filtered);
 
             // this.checks.forEach((box) => {
             //     if (box.checked == true) {
