@@ -421,25 +421,37 @@ var PoolParty = function () {
 
             //1. check which boxes are checked and return only the services which are 'true'
             //2. filter those results down to 3 (create an array, and push/pop the array)
-
-            console.log(this.services);
+            var services = this.services;
+            // console.log(this.services);
             // console.log(poolDealers.dealers);
-            var certz = poolDealers.dealers[0].data.certifications;
+            // let certz = poolDealers.dealers[0].data.certifications;
             // console.log(certz);
             this.die = [];
+            var dealers = poolDealers.dealers;
+            console.log(dealers);
 
             //at this point, we have our filtered checks.
             //now, we need to see what those are and check them against the services the
-            //dealers offer
-            this.dealers = poolDealers.dealers.filter(function (d) {
-                // console.log(d.data.certifications);
-                // console.log(this.services);
-                // this.die.push(d);
-                //one issue with the following statement is that these two arrays
-                //do not exactly match at any time. How to remedy that?
-                return d.data.certifications == _this.services;
-            });
+            //dealers offer. So, we need to...
+            //1. look at each item in 'services'
+            //2. look at each item in 'certifications' in each dealer
+            //3. return the dealers that contain only the items that services is currently showing
 
+            dealers.forEach(function (item) {
+                _this.dealers = item.data.certifications.filter(function (c, i) {
+                    return console.log(c + ' : ' + services[i]);
+                }); //c == services[i]);
+                // console.log(c);
+                // console.log(services[i]);
+                // if (c === services[i]) this.die.push(item.data);
+                // return c == services[i];
+                // })
+            });
+            // this.dealers = poolDealers.dealers.filter(
+            //     function (d, i) {
+            //         return d.data.certifications === services[i];
+            //     });
+            console.log(this.die);
             console.log(this.dealers);
 
             // this.checks.forEach((box) => {
@@ -515,7 +527,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51988' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59389' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
