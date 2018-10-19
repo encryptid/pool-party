@@ -8,6 +8,7 @@ export default class PoolParty {
         this.checkboxes = null;
         this.poolPartyPlanning();
         this.poolFilter();
+        this.poolView();
     }
 
     poolPartyPlanning(method) {
@@ -21,14 +22,8 @@ export default class PoolParty {
                 //send them to services array
                 services.push(chk.id);
             }
-            // this was an attempt to validate the checkboxes at load, but it should be unnecessary
-            // chk.addEventListener('load', () => {
-            //     console.log(chk);
-            //     if (chk.checked == true) {
-            //         services.push(chk.id);
-            //     }
-            // })
         })
+
         //return all checked boxes on change
         this.checkboxes.forEach((chx) => {
             chx.addEventListener('change', (event) => {
@@ -50,21 +45,17 @@ export default class PoolParty {
                 }
             })
         });
-        // })
-        // this.cards = document.querySelectorAll('.card');
-        // console.log(this.cards);
-        // this.poolFilter();
+        this.cards = document.querySelectorAll('.card');
     }
 
     poolFilter() {
         //1. check which boxes are checked and return only the services which are 'true'
         //2. filter those results down to 3 (create an array, and push/pop the array)
         let services = this.services;
-        // console.log(this.services);
-        // console.log(poolDealers.dealers);
-        // let certz = poolDealers.dealers[0].data.certifications;
-        // console.log(certz);
-        this.die = [];
+        //test services:
+        // let services = ["Service Pro", "Installation Pro", "Residential Pro", "Commercial Pro"]
+        // let services = ["Residential Pro", "Installation Pro", "Service Pro"]
+        
         const dealers = poolDealers.dealers;
         console.log(dealers);
 
@@ -74,34 +65,81 @@ export default class PoolParty {
         //1. look at each item in 'services'
         //2. look at each item in 'certifications' in each dealer
         //3. return the dealers that contain only the items that services is currently showing
-        let filtered;
+        
+        //compare two arrays. If the first one has a word from the second, return true
+        let filtered = [];
+        
+        let matchedArrays = (arr1, arr2) => {
+            let match = true
+            arr2.forEach((word) => {
+                if (!arr1.includes(word)) {
+                    match = false
+                } 
+            });
+            return match
+        }
         
         dealers.forEach((item) => {
-                filtered = item.data.certifications.filter( (c,i) => {
-                return c === services[i]
-                });
-                    // console.log(c);
-                    // console.log(services[i]);
-                    // if (c === services[i]) this.die.push(item.data);
-                    // return c == services[i];
-                // })
+            //passing our two arrays through and pushing them to a new array.
+            if (matchedArrays(item.data.certifications, services) === true){
+                filtered.push(item.data);
+            };
         })
-        // this.dealers = poolDealers.dealers.filter(
-        //     function (d, i) {
-        //         return d.data.certifications === services[i];
-        //     });
-        console.log(this.die);
+        
         console.log(filtered);
+        console.log(`${filtered.length} result(s)!`);
+        this.filtered = filtered;
+    }
 
-        // this.checks.forEach((box) => {
-        //     if (box.checked == true) {
-        //     this.terms.push(box);
-        //     }
-        //     else {
-        //         console.log(`${box.id} is not checked`);
-        //     }  
-        // })
-        // console.log(this.terms);
-        // console.log(poolDealers);
+    poolView() {
+        const cards = this.cards;
+        const results = this.filtered;
+        //create an array of only the items we want to render
+        let render = results.slice(0,3);
+        //if I had more time, I would create another array with the leftover results
+        // for updating
+        render.forEach((item, i) => {
+            console.log(item, i);
+
+            //a better method would be to attach querySelectors and update them individually
+            // but this is for show for now
+            cards[i].innerHTML = `
+                <div class="card-header">
+                    <h3>${render[i].name}</h3>
+                </div>
+                <hr>
+                <a href="tel:${render[i].phone1}">
+                    <div class='phone'>
+                        <img class="desktop" src="assets/images/phone-icon-desktop.png">
+                        <img class="mobile tel" src="assets/images/phone-icon-mobile.png">
+                        <span class="mobile ttc">Tap to call</span>
+                        <span class='tel-num'>${render[i].phone1}</span>
+                    </div>
+                </a>
+                <p>Can't talk now? Click below to send an email.</p>
+                <button><img src="assets/images/email-icon.png"><span>Contact this Pro</span></button>
+                <div id="hours">
+                    <h4>Business Hours</h4>
+                    <p>Weekdays 7:00am - 7:00pm</p>
+                    <p>Saturdays 7:00am - 3:00pm</p>
+                    <p>Sundays - CLOSED</p>
+                </div>
+                <footer>
+                    <div class='icon'>
+                        <img src="assets/images/star-installation-pro.png">
+                        <span>Installation Pro</span>
+                    </div>
+                    <div class='icon'>
+                        <img src="assets/images/gear-service-pro.png">
+                        <span>Service Pro</span>
+                    </div>
+                    <div class='icon'>
+                        <img src="assets/images/home-residential-pro.png">
+                        <span>Residential Pro</span>
+                    </div>
+                </footer>
+            `
+        });
+
     }
 }

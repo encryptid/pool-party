@@ -365,6 +365,7 @@ var PoolParty = function () {
         this.checkboxes = null;
         this.poolPartyPlanning();
         this.poolFilter();
+        this.poolView();
     }
 
     _createClass(PoolParty, [{
@@ -380,14 +381,8 @@ var PoolParty = function () {
                     //send them to services array
                     services.push(chk.id);
                 }
-                // this was an attempt to validate the checkboxes at load, but it should be unnecessary
-                // chk.addEventListener('load', () => {
-                //     console.log(chk);
-                //     if (chk.checked == true) {
-                //         services.push(chk.id);
-                //     }
-                // })
             });
+
             //return all checked boxes on change
             this.checkboxes.forEach(function (chx) {
                 chx.addEventListener('change', function (event) {
@@ -409,10 +404,7 @@ var PoolParty = function () {
                             }
                 });
             });
-            // })
-            // this.cards = document.querySelectorAll('.card');
-            // console.log(this.cards);
-            // this.poolFilter();
+            this.cards = document.querySelectorAll('.card');
         }
     }, {
         key: 'poolFilter',
@@ -420,11 +412,10 @@ var PoolParty = function () {
             //1. check which boxes are checked and return only the services which are 'true'
             //2. filter those results down to 3 (create an array, and push/pop the array)
             var services = this.services;
-            // console.log(this.services);
-            // console.log(poolDealers.dealers);
-            // let certz = poolDealers.dealers[0].data.certifications;
-            // console.log(certz);
-            this.die = [];
+            //test services:
+            // let services = ["Service Pro", "Installation Pro", "Residential Pro", "Commercial Pro"]
+            // let services = ["Residential Pro", "Installation Pro", "Service Pro"]
+
             var dealers = poolDealers.dealers;
             console.log(dealers);
 
@@ -434,35 +425,47 @@ var PoolParty = function () {
             //1. look at each item in 'services'
             //2. look at each item in 'certifications' in each dealer
             //3. return the dealers that contain only the items that services is currently showing
-            var filtered = void 0;
+
+            //compare two arrays. If the first one has a word from the second, return true
+            var filtered = [];
+
+            var matchedArrays = function matchedArrays(arr1, arr2) {
+                var match = true;
+                arr2.forEach(function (word) {
+                    if (!arr1.includes(word)) {
+                        match = false;
+                    }
+                });
+                return match;
+            };
 
             dealers.forEach(function (item) {
-                filtered = item.data.certifications.filter(function (c, i) {
-                    return c === services[i];
-                });
-                // console.log(c);
-                // console.log(services[i]);
-                // if (c === services[i]) this.die.push(item.data);
-                // return c == services[i];
-                // })
+                //passing our two arrays through and pushing them to a new array.
+                if (matchedArrays(item.data.certifications, services) === true) {
+                    filtered.push(item.data);
+                };
             });
-            // this.dealers = poolDealers.dealers.filter(
-            //     function (d, i) {
-            //         return d.data.certifications === services[i];
-            //     });
-            console.log(this.die);
-            console.log(filtered);
 
-            // this.checks.forEach((box) => {
-            //     if (box.checked == true) {
-            //     this.terms.push(box);
-            //     }
-            //     else {
-            //         console.log(`${box.id} is not checked`);
-            //     }  
-            // })
-            // console.log(this.terms);
-            // console.log(poolDealers);
+            console.log(filtered);
+            console.log(filtered.length + ' result(s)!');
+            this.filtered = filtered;
+        }
+    }, {
+        key: 'poolView',
+        value: function poolView() {
+            var cards = this.cards;
+            var results = this.filtered;
+            //create an array of only the items we want to render
+            var render = results.slice(0, 3);
+            //if I had more time, I would create another array with the leftover results
+            // for updating
+            render.forEach(function (item, i) {
+                console.log(item, i);
+
+                //a better method would be to attach querySelectors and update them individually
+                // but this is for show for now
+                cards[i].innerHTML = '\n                <div class="card-header">\n                    <h3>' + render[i].name + '</h3>\n                </div>\n                <hr>\n                <a href="tel:' + render[i].phone1 + '">\n                    <div class=\'phone\'>\n                        <img class="desktop" src="assets/images/phone-icon-desktop.png">\n                        <img class="mobile tel" src="assets/images/phone-icon-mobile.png">\n                        <span class="mobile ttc">Tap to call</span>\n                        <span class=\'tel-num\'>' + render[i].phone1 + '</span>\n                    </div>\n                </a>\n                <p>Can\'t talk now? Click below to send an email.</p>\n                <button><img src="assets/images/email-icon.png"><span>Contact this Pro</span></button>\n                <div id="hours">\n                    <h4>Business Hours</h4>\n                    <p>Weekdays 7:00am - 7:00pm</p>\n                    <p>Saturdays 7:00am - 3:00pm</p>\n                    <p>Sundays - CLOSED</p>\n                </div>\n                <footer>\n                    <div class=\'icon\'>\n                        <img src="assets/images/star-installation-pro.png">\n                        <span>Installation Pro</span>\n                    </div>\n                    <div class=\'icon\'>\n                        <img src="assets/images/gear-service-pro.png">\n                        <span>Service Pro</span>\n                    </div>\n                    <div class=\'icon\'>\n                        <img src="assets/images/home-residential-pro.png">\n                        <span>Residential Pro</span>\n                    </div>\n                </footer>\n            ';
+            });
         }
     }]);
 
@@ -526,7 +529,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59389' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '65026' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
